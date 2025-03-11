@@ -36,10 +36,10 @@ public class Main {
                 default -> {
 
                     if (num1 > num2) {
-                        answer = num1 / num2;
+                        answer = (double) num1 / num2;
                         question = "What is the answer to: " + num1 + " / " + num2 + "?";
                     } else {
-                        answer = num2 / num1;
+                        answer = (double) num2 / num1;
                         question = "What is the answer to: " + num2 + " / " + num1 + "?";
                     }
 
