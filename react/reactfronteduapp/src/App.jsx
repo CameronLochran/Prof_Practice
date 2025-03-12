@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import './App.css'
-import QuestionCard from './questionCard'
+import QuestionCard from './components/questionCard'
 
 function App() {
 
@@ -9,8 +8,8 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path='/' element={<StartPage/>}></Route>
-          <Route path='/questionscard' element={<QuestionCard/>}></Route>
+          <Route exact path="/" element={<StartPage/>}/>
+          <Route path="questionscard" element={<QuestionCard/>}/>
         </Routes>
       </Router>
     </>
