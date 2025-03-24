@@ -1,0 +1,126 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "category":"Software Dev",
+        "question": "What is the purpose of a compiler?",
+        "options": ["A) To execute code directly", "B) To translate code from one language to another", "C) To compile code without errors", "D) To test the code for performance"],
+        "answer": "B) To translate code from one language to another"
+      },
+      {
+        "category":"Software Dev",
+        "question": "Which of the following is an example of a high-level programming language?",
+        "options": ["A) Assembly", "B) C", "C) Java", "D) Machine Code"],
+        "answer": "C) Java"
+      },
+      {
+        "category":"Software Dev",
+        "question": "What does OOP stand for?",
+        "options": ["A) Object-Oriented Programming", "B) Online Operations Program", "C) Open Option Programming", "D) Operational Object Protocol"],
+        "answer": "A) Object-Oriented Programming"
+      },
+      {
+        "category":"Software Dev",
+        "question": "Which of the following is NOT one of the four main principles of Object-Oriented Programming (OOP)?",
+        "options": ["A) Inheritance", "B) Encapsulation", "C) Polymorphism", "D) Compilation"],
+        "answer": "D) Compilation"
+      },
+      {
+        "category":"Software Dev",
+        "question": "Which keyword is used to define a class in Java?",
+        "options": ["A) function", "B) class", "C) object", "D) define"],
+        "answer": "B) class"
+      },
+      {
+        "category":"Software Dev",
+        "question": "Which of the following is a JavaScript data type?",
+        "options": ["A) Integer", "B) String", "C) ArrayList", "D) Decimal"],
+        "answer": "B) String"
+      },
+      {
+        "category":"Software Dev",
+        "question": "Which operator is used to compare equality in JavaScript?",
+        "options": ["A) =", "B) ==", "C) !==", "D) ==="],
+        "answer": "B) =="
+      },
+      {
+        "category":"Software Dev",
+        "question": "What does a loop do in programming?",
+        "options": ["A) It stops the program", "B) It repeats a block of code", "C) It calculates values", "D) It initializes variables"],
+        "answer": "B) It repeats a block of code"
+      },
+      {
+        "category":"Software Dev",
+        "question": "What is the purpose of the `return` keyword in JavaScript functions?",
+        "options": ["A) To end a loop", "B) To specify the function's output", "C) To declare a variable", "D) To define a class"],
+        "answer": "B) To specify the function's output"
+      },
+      {
+        "category":"Software Dev",
+        "question": "What is the result of the expression `5 + '5'` in JavaScript?",
+        "options": ["A) 55", "B) 10", "C) NaN", "D) SyntaxError"],
+        "answer": "A) 55"
+      },
+      {
+        "category":"Software Dev",
+        "question": "Which of the following is used to iterate over the elements of an array in JavaScript?",
+        "options": ["A) if", "B) for", "C) switch", "D) break"],
+        "answer": "B) for"
+      },
+      {
+        "category":"Software Dev",
+        "question": "Which of the following is an example of a database management system (DBMS)?",
+        "options": ["A) SQL", "B) MongoDB", "C) HTML", "D) JavaScript"],
+        "answer": "B) MongoDB"
+      },
+      {
+        "category":"Software Dev",
+        "question": "What does API stand for?",
+        "options": ["A) Application Program Interface", "B) Active Programming Interface", "C) Application Protocol Integration", "D) Active Program Interchange"],
+        "answer": "A) Application Program Interface"
+      },
+      {
+        "category":"Software Dev",
+        "question": "Which of the following is an example of a relational database?",
+        "options": ["A) MongoDB", "B) PostgreSQL", "C) Firebase", "D) Cassandra"],
+        "answer": "B) PostgreSQL"
+      },
+      {
+        "category":"Software Dev",
+        "question": "What is the purpose of a version control system like Git?",
+        "options": ["A) To store source code", "B) To track changes in code", "C) To compile code", "D) To run tests"],
+        "answer": "B) To track changes in code"
+      },
+      {
+        "category":"Software Dev",
+        "question": "What does the term 'debugging' refer to?",
+        "options": ["A) Writing code", "B) Compiling code", "C) Finding and fixing errors in code", "D) Testing code for performance"],
+        "answer": "C) Finding and fixing errors in code"
+      },
+      {
+        "category":"Software Dev",
+        "question": "Which of the following is an example of a programming framework?",
+        "options": ["A) Node.js", "B) C++", "C) Java", "D) MongoDB"],
+        "answer": "A) Node.js"
+      },
+      {
+        "category":"Software Dev",
+        "question": "Which type of website is built using static content?",
+        "options": ["A) Dynamic website", "B) Interactive website", "C) Static website", "D) Multi-user website"],
+        "answer": "C) Static website"
+      },
+      {
+        "category":"Software Dev",
+        "question": "What is the main difference between a stack and a queue?",
+        "options": ["A) Stack follows LIFO (Last In First Out) order; Queue follows FIFO (First In First Out)", "B) Stack follows FIFO order; Queue follows LIFO order", "C) Both follow LIFO order", "D) Both follow FIFO order"],
+        "answer": "A) Stack follows LIFO (Last In First Out) order; Queue follows FIFO (First In First Out)"
+      },
+      {
+        "category":"Software Dev",
+        "question": "Which of the following is NOT a primitive data type in JavaScript?",
+        "options": ["A) Number", "B) Boolean", "C) String", "D) Object"],
+        "answer": "D) Object"
+      }
+    ]
+  }
+  
