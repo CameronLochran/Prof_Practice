@@ -1,0 +1,262 @@
+[
+  {
+    "id": 1,
+    "category": "Software Dev",
+    "difficulty": "Normal",
+    "question": "What is the purpose of a compiler?",
+    "options": [
+      "To execute code directly",
+      "To translate code from one language to another",
+      "To compile code without errors",
+      "To test the code for performance"
+    ],
+    "answer": "To translate code from one language to another"
+  },
+  {
+    "id": 2,
+    "category": "Software Dev",
+    "difficulty": "Normal",
+    "question": "Which of the following is an example of a high-level programming language?",
+    "options": [
+      "Assembly",
+      "C",
+      "Java",
+      "Machine Code"
+    ],
+    "answer": "Java"
+  },
+  {
+    "id": 3,
+    "category": "Software Dev",
+    "difficulty": "Normal",
+    "question": "What does OOP stand for?",
+    "options": [
+      "Object-Oriented Programming",
+      "Online Operations Program",
+      "Open Option Programming",
+      "Operational Object Protocol"
+    ],
+    "answer": "Object-Oriented Programming"
+  },
+  {
+    "id": 4,
+    "category": "Software Dev",
+    "difficulty": "Normal",
+    "question": "Which of the following is NOT one of the four main principles of Object-Oriented Programming (OOP)?",
+    "options": [
+      "Inheritance",
+      "Encapsulation",
+      "Polymorphism",
+      "Compilation"
+    ],
+    "answer": "Compilation"
+  },
+  {
+    "id": 5,
+    "category": "Software Dev",
+    "difficulty": "Normal",
+    "question": "Which keyword is used to define a class in Java?",
+    "options": [
+      "function",
+      "class",
+      "object",
+      "define"
+    ],
+    "answer": "class"
+  },
+  {
+    "id": 6,
+    "category": "Software Dev",
+    "difficulty": "Normal",
+    "question": "Which of the following is a JavaScript data type?",
+    "options": [
+      "Integer",
+      "String",
+      "ArrayList",
+      "Decimal"
+    ],
+    "answer": "String"
+  },
+  {
+    "id": 7,
+    "category": "Software Dev",
+    "difficulty": "Normal",
+    "question": "Which operator is used to compare equality in JavaScript?",
+    "options": [
+      "=",
+      "==",
+      "!==",
+      "==="
+    ],
+    "answer": "=="
+  },
+  {
+    "id": 8,
+    "category": "Software Dev",
+    "difficulty": "Normal",
+    "question": "What does a loop do in programming?",
+    "options": [
+      "It stops the program",
+      "It repeats a block of code",
+      "It calculates values",
+      "It initializes variables"
+    ],
+    "answer": "It repeats a block of code"
+  },
+  {
+    "id": 9,
+    "category": "Software Dev",
+    "difficulty": "Normal",
+    "question": "What is the purpose of the `return` keyword in JavaScript functions?",
+    "options": [
+      "To end a loop",
+      "To specify the function's output",
+      "To declare a variable",
+      "To define a class"
+    ],
+    "answer": "To specify the function's output"
+  },
+  {
+    "id": 10,
+    "category": "Software Dev",
+    "difficulty": "Normal",
+    "question": "What is the result of the expression `5 + '5'` in JavaScript?",
+    "options": [
+      "55",
+      "10",
+      "NaN",
+      "SyntaxError"
+    ],
+    "answer": "55"
+  },
+  {
+    "id": 11,
+    "category": "Software Dev",
+    "difficulty": "Normal",
+    "question": "Which of the following is used to iterate over the elements of an array in JavaScript?",
+    "options": [
+      "if",
+      "for",
+      "switch",
+      "break"
+    ],
+    "answer": "for"
+  },
+  {
+    "id": 12,
+    "category": "Software Dev",
+    "difficulty": "Normal",
+    "question": "Which of the following is an example of a database management system (DBMS)?",
+    "options": [
+      "SQL",
+      "MongoDB",
+      "HTML",
+      "JavaScript"
+    ],
+    "answer": "MongoDB"
+  },
+  {
+    "id": 13,
+    "category": "Software Dev",
+    "difficulty": "Normal",
+    "question": "What does API stand for?",
+    "options": [
+      "Application Program Interface",
+      "Active Programming Interface",
+      "Application Protocol Integration",
+      "Active Program Interchange"
+    ],
+    "answer": "Application Program Interface"
+  },
+  {
+    "id": 14,
+    "category": "Software Dev",
+    "difficulty": "Normal",
+    "question": "Which of the following is an example of a relational database?",
+    "options": [
+      "MongoDB",
+      "PostgreSQL",
+      "Firebase",
+      "Cassandra"
+    ],
+    "answer": "PostgreSQL"
+  },
+  {
+    "id": 15,
+    "category": "Software Dev",
+    "difficulty": "Normal",
+    "question": "What is the purpose of a version control system like Git?",
+    "options": [
+      "To store source code",
+      "To track changes in code",
+      "To compile code",
+      "To run tests"
+    ],
+    "answer": "To track changes in code"
+  },
+  {
+    "id": 16,
+    "category": "Software Dev",
+    "difficulty": "Normal",
+    "question": "What does the term 'debugging' refer to?",
+    "options": [
+      "Writing code",
+      "Compiling code",
+      "Finding and fixing errors in code",
+      "Testing code for performance"
+    ],
+    "answer": "Finding and fixing errors in code"
+  },
+  {
+    "id": 17,
+    "category": "Software Dev",
+    "difficulty": "Normal",
+    "question": "Which of the following is an example of a programming framework?",
+    "options": [
+      "Node.js",
+      "C++",
+      "Java",
+      "MongoDB"
+    ],
+    "answer": "Node.js"
+  },
+  {
+    "id": 18,
+    "category": "Software Dev",
+    "difficulty": "Normal",
+    "question": "Which type of website is built using static content?",
+    "options": [
+      "Dynamic website",
+      "Interactive website",
+      "Static website",
+      "Multi-user website"
+    ],
+    "answer": "Static website"
+  },
+  {
+    "id": 19,
+    "category": "Software Dev",
+    "difficulty": "Normal",
+    "question": "What is the main difference between a stack and a queue?",
+    "options": [
+      "Stack follows LIFO (Last In First Out) order; Queue follows FIFO (First In First Out)",
+      "Stack follows FIFO order; Queue follows LIFO order",
+      "Both follow LIFO order",
+      "Both follow FIFO order"
+    ],
+    "answer": "Stack follows LIFO (Last In First Out) order; Queue follows FIFO (First In First Out)"
+  },
+  {
+    "id": 20,
+    "category": "Software Dev",
+    "difficulty": "Normal",
+    "question": "Which of the following is NOT a primitive data type in JavaScript?",
+    "options": [
+      "Number",
+      "Boolean",
+      "String",
+      "Object"
+    ],
+    "answer": "Object"
+  }
+]
