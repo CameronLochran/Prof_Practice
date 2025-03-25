@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import React from "react";
+import { Link } from "react-router-dom"
 import './SoftwareQuiz.css'; // Import the CSS file for styling
 
 export default function SoftwareQuiz() {
@@ -104,6 +105,10 @@ export default function SoftwareQuiz() {
           Next Question →
         </button>
       )}
+      <br/><br/><br/><br/><br/>
+      <Link to="/">
+        <button className="home-button">Home</button>
+      </Link>
     </>
   );
 }
