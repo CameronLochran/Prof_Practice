@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- For better compatibility with older browsers -->
+    <meta name="theme-color" content="#000000" /> <!-- Set the theme color for mobile browsers -->
+    <title>Team WFLS</title>
+
+
+    <style>
+      /* Additional internal styles to make the app responsive */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 800px; /* Maximum width for large screens */
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .quiz-container {
+        padding: 20px;
+        border-radius: 8px;
+        background-color: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .options-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+        gap: 15px;
+      }
+
+      @media (max-width: 600px) {
+        .options-grid {
+          grid-template-columns: 1fr; /* Stack options on small screens */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" class="container"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
