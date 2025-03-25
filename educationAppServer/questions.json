@@ -120,7 +120,7 @@
     "id": 10,
     "category": "Software Dev",
     "difficulty": "Normal",
-    "question": "What is the result of the expression `5 + '5'` in JavaScript?",
+    "question": "What is the result of the expression '5' + '5' in JavaScript?",
     "options": [
       "55",
       "10",
