@@ -18,6 +18,12 @@
   flex-direction: column;
   text-align: center;
 }
-
-
-
+.software-button{
+  border: 1px solid black;
+}
+.back-button{
+  border: 1px solid black;
+}
+button:hover{
+  border: 1px solid black
+}
