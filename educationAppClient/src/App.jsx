@@ -2,13 +2,14 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import StartPage from "./components/StartPage"
 import QuizCategoryAndDifficulty from "./components/quizCategoryAndDifficulty"
 import SoftwareQuiz from "./components/SoftwareQuiz"
-import "./App.css";
 
 function App() {
   
 
   return (
     <>
+    <center>
+      
       <Router>
         <Routes>
           <Route path="/" element={<StartPage/>}/>
@@ -16,6 +17,7 @@ function App() {
           <Route path="/softwarequiz" element={<SoftwareQuiz/>}/>
         </Routes>
       </Router>
+      </center>
     </>
   )
 }

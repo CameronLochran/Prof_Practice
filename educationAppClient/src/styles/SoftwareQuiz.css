@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(black, rgb(13, 154, 0));
+
   }
   
   .quiz-container {
@@ -9,25 +9,27 @@ body {
   .options-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 30px; /* Adds space between buttons */
+    gap: 50px; /* Adds space between buttons */
     opacity: 100%;
     padding-top: 10px;
   }
   
   .option-button {
     padding: 12px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     border-radius: 8px;
     border: 1px solid #ccc;
-    background-color: transparent;
-    text-align: left;
+    text-align: center;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, opacity 0.3s;
   }
   
   .option-button:hover {
-    background-color: black;
+    background-color: transparent;
     color: white;
-    opacity: 0.7;
+    opacity: 100;
+    
   }
   
   .option-button:disabled {
@@ -63,6 +65,7 @@ body {
     padding-top: 40px;
     padding-bottom: 40px;
     border-radius: 0;
+    border-color: black;
   }
   
   /* Progress Bar Styles */

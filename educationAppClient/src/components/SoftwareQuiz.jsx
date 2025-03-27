@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import { Link } from "react-router-dom"
-import './SoftwareQuiz.css'; // Import the CSS file for styling
+import { Link } from "react-router-dom";
+import '../styles/SoftwareQuiz.css';
 
 export default function SoftwareQuiz() {
   const [questions, setQuestions] = useState([]);
@@ -9,6 +9,7 @@ export default function SoftwareQuiz() {
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [correctAnswer, setCorrectAnswer] = useState("");
 
+  // Fetch questions and set initial progress
   useEffect(() => {
     // Fetch questions
     fetch("http://localhost:3000/api/questions")
@@ -28,38 +29,42 @@ export default function SoftwareQuiz() {
       })
       .catch((error) => console.error("Error fetching questions:", error));
 
-    // Load the saved progress from localStorage
+    // Load the saved progress (current question index) from localStorage
     const savedProgress = localStorage.getItem('quizProgress');
     if (savedProgress) {
-      setCurrentQuestionIndex(Number(savedProgress));
+      setCurrentQuestionIndex(Number(savedProgress)); // Start from the saved question index
     }
   }, []);
 
+  // Save progress whenever the current question index changes
   useEffect(() => {
-    // Save current question index to localStorage whenever it changes
-    localStorage.setItem('quizProgress', currentQuestionIndex);
+    localStorage.setItem('quizProgress', currentQuestionIndex); // Store current question index
   }, [currentQuestionIndex]);
 
-  if (!questions.length) return <p className="text-center">Loading software questions...</p>;
-
-  if (currentQuestionIndex >= questions.length)
-    return <p className="text-center text-2xl font-bold">🎉 Quiz Completed! 🎉</p>;
-
-  const question = questions[currentQuestionIndex];
-
+  // Handle selecting an answer
   const handleAnswerSelect = (answer) => {
     setSelectedAnswer(answer);
-    setCorrectAnswer(question.answer); // Store the correct answer
+    setCorrectAnswer(questions[currentQuestionIndex].answer); // Store the correct answer
   };
 
+  // Move to the next question
   const nextQuestion = () => {
     setSelectedAnswer(""); // Reset selection
     setCorrectAnswer(""); // Reset correct answer display
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1); // Move to next question
   };
 
-  // Calculate progress percentage, starts at 0
-  const progress = ((currentQuestionIndex) / questions.length) * 100;
+  // Handle quiz completion
+  const progress = ((currentQuestionIndex) / questions.length) * 100; // Calculate progress percentage
+
+  // If no questions are loaded yet
+  if (!questions.length) return <p className="text-center">Loading software questions...</p>;
+
+  // If quiz is completed
+  if (currentQuestionIndex >= questions.length)
+    return <p className="text-center text-2xl font-bold">🎉 Quiz Completed! 🎉</p>;
+
+  const question = questions[currentQuestionIndex]; // Get the current question
 
   return (
     <>
@@ -86,17 +91,18 @@ export default function SoftwareQuiz() {
                 : "bg-gray-200"
             }`}
             disabled={!!selectedAnswer} // Disable buttons after selecting
-            id="option-btn"
           >
             {option}
           </button>
         ))}
       </div>
+
       {selectedAnswer && (
-        <p className="mt-2 font-semibold">
+        <p className="mt-2 font-semibold text-white">
           {selectedAnswer === correctAnswer ? "✅ Correct!" : `❌ Wrong! The correct answer is: ${correctAnswer}`}
         </p>
       )}
+
       {selectedAnswer && (
         <button
           onClick={nextQuestion}
@@ -105,9 +111,10 @@ export default function SoftwareQuiz() {
           Next Question →
         </button>
       )}
-      <br/><br/><br/><br/><br/>
-      <Link to="/">
-        <button className="home-button">Home</button>
+
+      <br /><br /><br /><br /><br />
+      <Link to="/categorySelection">
+        <button className="back-button">Back</button>
       </Link>
     </>
   );
