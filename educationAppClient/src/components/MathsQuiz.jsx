@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
-import '../styles/SoftwareQuiz.css';
+import '../styles/MathsQuiz.css';
 
-export default function SoftwareQuiz() {
+export default function MathsQuiz() {
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState("");
@@ -17,7 +17,7 @@ export default function SoftwareQuiz() {
       .then((data) => {
         if (Array.isArray(data)) {
           const filteredQuestions = data.filter(
-            (q) => q.category === "Software Dev" && q.difficulty === "Normal"
+            (q) => q.category === "Maths" && q.difficulty === "Normal"
           );
           setQuestions(filteredQuestions);
         } else {
@@ -69,7 +69,7 @@ export default function SoftwareQuiz() {
   return (
     <>
       <main><header><br /><br /></header>
-        <h1 className="software-h1">Software Quiz</h1>
+        <h1 className="software-h1">Maths Quiz</h1>
 
         {/* Progress Bar */}
         <div className="progress-bar-container">

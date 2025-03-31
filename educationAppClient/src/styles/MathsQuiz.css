@@ -1,7 +1,7 @@
   
   .quiz-container {
     text-align: center;
-    background-image: linear-gradient(#009900, black);
+    background-image: linear-gradient(#CC6600, black);
   }
   
   .options-grid {
@@ -16,6 +16,7 @@
   
   .option-button {
     padding: 12px;
+    background-color: black;
     padding-top: 30px;
     padding-bottom: 30px;
     border-radius: 8px;

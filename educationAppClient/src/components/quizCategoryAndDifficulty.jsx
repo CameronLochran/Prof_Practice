@@ -17,24 +17,29 @@ const QuizCategoryAndDifficulty = () => {
     <main class=''> 
     <div className='quizcategory'>
 
-      <h1 className='selecting-quiz-header'>Select Quiz and Difficulty</h1>
+      <h1 className='heading'>Select Quiz and Difficulty</h1>
       <br /><br /><br />
       <div className="home-container">
-        <section>
+        
+        
         <div className="progress-bar-container">
-          <div className="" style={{ width: `${progress}%` }}></div>
-        </div>
+          <div className="progress" style={{ width: `${progress}%` }} ></div>
+        
+
 
         {/* Display the current progress */}
         <p>Current Progress: {progress}%</p>
       
-
+        </div>
       {/* Button to Start the Software Quiz */}
-      
+      <section class = "content">
 
       
       <Link to="/softwarequiz">
         <button className="software-button">Software</button>
+      </Link><br /><br />
+      <Link to="/mathsquiz">
+        <button className="maths-button">Maths</button>
       </Link><br /><br />
       </section>
 

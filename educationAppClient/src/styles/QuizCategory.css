@@ -16,13 +16,21 @@ h1, h2 {
   color: #2d3748;
 }
 
+p {
+  display: flex;
+  padding-top: 10px;
+  justify-content: center;
+  
+}
+
 /* Progress Bar Container */
 .progress-bar{
   width: 300px; /* Adjust width */
   height: 20px;
   border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+
   height: 100%;
   background-color: #00ffff; /* Default progress color */
   transition: width 0.4s ease-in-out;
@@ -33,13 +41,34 @@ h1, h2 {
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 15px;
+
+  
 }
 
 /* Software Button */
 .software-button {
   width: 150px;
-  height: 50px;
-  background-color: #28a745;
+  height: 150px;
+  background-image: linear-gradient(#009900, black);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+  margin-right: 175px;
+  margin-left: 30px;
+}
+
+.software-button:hover {
+  transform: scale(1.05);
+}
+
+.maths-button{
+  width: 150px;
+  height: 150px;
+  background-image: linear-gradient(#CC6600, black);
   color: white;
   font-size: 16px;
   border: none;
@@ -48,9 +77,7 @@ h1, h2 {
   transition: 0.3s ease, transform 0.2s ease;
   margin-top: 20px;
 }
-
-.software-button:hover {
-  background-color: #218838;
+.maths-button:hover {
   transform: scale(1.05);
 }
 
@@ -62,13 +89,14 @@ h1, h2 {
   color: rgb(110, 28, 28);
   font-size: 14px;
   border: none;
-  border-radius: 8px;
+  border-radius: 20px;
   cursor: pointer;
   transition: 0.3s ease, transform 0.2s ease;
   margin-top: 20px;
   position:absolute;
-  margin-top: 15px;
+  margin-top: 90px;
   left: 46.2%;
+ 
 }
 
 .back-button:hover {
@@ -83,9 +111,31 @@ h1, h2 {
   align-items: flex-start; /* Ensures everything is aligned left */
 }
 
+.content {
+  display: flex;
+}
+
+.progress-bar-container {
+  margin-right:400px;
+ 
+}
+
+.heading {
+  align-self: center;
+  padding-right: 230px;
+}
+
+
+
+
+
+/* MEDIA QUERIES */
+
 /* Responsive Fixes */
 @media (max-width: 768px) {
   .quizcategory {
       padding-left: 20px; /* Adjust left position for smaller screens */
   }
 }
+
+
