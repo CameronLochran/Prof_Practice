@@ -69,11 +69,15 @@ export default function MathsQuiz() {
   return (
     <>
       <main><header><br /><br /></header>
-        <h1 className="software-h1">Maths Quiz</h1>
+      <center>
+        <div className="maths-quiz-container">
+        <h1 className="maths-h1">Maths Quiz</h1>
 
         {/* Progress Bar */}
         <div className="progress-bar-container">
+          
           <div className="progress-bar" style={{ width: `${progress}%` }}></div>
+          
         </div>
         
         <h2 className="question">{question.question}</h2>
@@ -114,6 +118,8 @@ export default function MathsQuiz() {
         <Link to="/categorySelection">
           <button className="back-button">Back</button>
         </Link>
+        </div>
+        </center>
       </main>
     </>
   );

@@ -41,8 +41,6 @@ p {
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 15px;
-
-  
 }
 
 /* Software Button */
@@ -115,17 +113,10 @@ p {
   display: flex;
 }
 
-.progress-bar-container {
-  margin-right:400px;
- 
-}
-
 .heading {
   align-self: center;
   padding-right: 230px;
 }
-
-
 
 
 

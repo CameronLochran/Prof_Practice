@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
-import '../styles/SoftwareQuiz.css';
+import '../styles/EnglishQuiz.css';
 
-export default function SoftwareQuiz() {
+export default function EnglishQuiz() {
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState("");
@@ -17,7 +17,7 @@ export default function SoftwareQuiz() {
       .then((data) => {
         if (Array.isArray(data)) {
           const filteredQuestions = data.filter(
-            (q) => q.category === "Software Dev" && q.difficulty === "Normal"
+            (q) => q.category === "English" && q.difficulty === "Normal"
           );
           setQuestions(filteredQuestions);
         } else {
@@ -62,7 +62,7 @@ export default function SoftwareQuiz() {
     setCorrectAnswer("");
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
   };
-  if(correctAnswers > 19) return <div className="progress-bar"></div>
+  if(correctAnswers > 19) return <div className="progress-bar color-lightblue"></div>
   const progress = (currentQuestionIndex / questions.length) * 100;
 
   
@@ -70,8 +70,7 @@ export default function SoftwareQuiz() {
     <>
       <main><header><br /><br /></header>
       <center>
-        <div className="software-quiz-container">
-        <h1 className="software-h1">Software Quiz</h1>
+        <h1 className="english-h1">English Quiz</h1>
 
         {/* Progress Bar */}
         <div className="progress-bar-container">
@@ -79,8 +78,7 @@ export default function SoftwareQuiz() {
         </div>
         
         <h2 className="question">{question.question}</h2>
-        <div className="options-grid">
-          
+        <div className="options-grid mt-4">
           {question.options.map((option, index) => (
             <button
               key={index}
@@ -117,7 +115,6 @@ export default function SoftwareQuiz() {
         <Link to="/categorySelection">
           <button className="back-button">Back</button>
         </Link>
-        </div>
         </center>
       </main>
     </>
