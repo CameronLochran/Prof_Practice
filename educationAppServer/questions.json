@@ -263,13 +263,260 @@
     "id": 21,
     "category": "Maths",
     "difficulty":"Normal",
-    "question": "What is 1 + 1?",
+    "question": "What is 26 + 34?",
     "options":[
-      "2",
-      "4",
-      "3",
+      "53",
+      "50",
+      "60",
+      "70"
+    ],
+    "answer": "60"
+  },
+  {
+    "id": 22,
+    "category": "Maths",
+    "difficulty": "Normal",
+    "question": "What is 44 + 32",
+    "options":[
+      "66",
+      "76",
+      "80",
+      "74"
+    ],
+    "answer": "76"
+  },
+  {
+    "id": 23,
+    "category": "Maths",
+    "difficulty": "Normal",
+    "question": "What is 12 * 12?",
+    "options":[
+      "144",
+      "120",
+      "100",
+      "110"
+    ],
+    "answer": "144"
+  },
+  {
+    "id": 24,
+    "category": "Maths",
+    "difficulty": "Normal",
+    "question": "What is 100 / 4?",
+    "options":[
+      "25",
+      "20",
+      "30",
+      "40"
+    ],
+    "answer": "25"
+  },
+  {
+    "id": 25,
+    "category": "Maths",
+    "difficulty": "Normal",
+    "question": "What is the square root of 64?",
+    "options":[
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": 26,
+    "category": "Maths",
+    "difficulty": "Normal",
+    "question": "What is the value of pi?",
+    "options":[
+      "3.14",
+      "3.15",
+      "3.16",
+      "3.17"
+    ],
+    "answer": "3.14"
+  },
+  {
+    "id": 27,
+    "category": "Maths",
+    "difficulty": "Normal",
+    "question": "What is the area of a circle with radius 5?",
+    "options":[
+      "78.5",
+      "50",
+      "25",
+      "100"
+    ],
+    "answer": "78.5"
+  },
+  {
+    "id": 28,
+    "category": "Maths",
+    "difficulty": "Normal",
+    "question": "What is the perimeter of a rectangle with length 10 and width 5?",
+    "options":[
+      "30",
+      "40",
+      "50",
+      "60"
+    ],
+    "answer": "30"
+  },
+  {
+    "id": 29,
+    "category": "Maths",
+    "difficulty": "Normal",
+    "question": "What is the value of x in the equation 2x + 3 = 7?",
+    "options":[
+      "-2",
+      "-1",
+      "-3",
+      "-4"
+    ],
+    "answer": "-2"
+  },
+  {
+    "id": 30,
+    "category": "Maths",
+    "difficulty": "Normal",
+    "question": "What is the value of 2^3?",
+    "options":[
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": 31,
+    "category": "Maths",
+    "difficulty": "Normal",
+    "question": "What is the value of 5! (5 factorial)?",
+    "options":[
+      "120",
+      "100",
+      "80",
+      "60"
+    ],
+    "answer": "120"
+  },
+  {
+    "id": 32,
+    "category": "Maths",
+    "difficulty": "Normal",
+    "question": "What is the value of sin(90 degrees)?",
+    "options":[
+      "0",
+      "1",
+      "-1",
+      "-2"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": 33,
+    "category": "Maths",
+    "difficulty": "Normal",
+    "question": "What is the value of cos(0 degrees)?",
+    "options":[
+      "-1",
+      "-2",
+      "0",
       "1"
     ],
+    "answer": "1"
+  },
+  {
+    "id": 34,
+    "category": "Maths",
+    "difficulty": "Normal",
+    "question": "What is the value of tan(45 degrees)?",
+    "options":[
+      "-1",
+      "-2",
+      "-3",
+      "-4"
+    ],
+    "answer": "-1"
+  },
+  {
+    "id": 35,
+    "category": "Maths",
+    "difficulty": "Normal",
+    "question": "What is the value of log(100)?",
+    "options":[
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
     "answer": "2"
+  },
+  {
+    "id": 36,
+    "category": "Maths",
+    "difficulty": "Normal",
+    "question": "What is the value of e (Euler's number)?",
+    "options":[
+      "2.71",
+      "3.14",
+      "1.41",
+      "-1"
+    ],
+    "answer": "2.71"
+  },
+  {
+    "id": 37,
+    "category": "Maths",
+    "difficulty": "Normal",
+    "question": "What is the value of 10^3?",
+    "options":[
+      "-1000",
+      "-2000",
+      "-3000",
+      "-4000"
+    ],
+    "answer": "-1000"
+  },
+  {
+    "id": 38,
+    "category": "Maths",
+    "difficulty": "Normal",
+    "question": "What is the value of 3 + 4 * 2?",
+    "options":[
+      "-11",
+      "-12",
+      "-13",
+      "-14"
+    ],
+    "answer": "-11"
+  },
+  {
+    "id": 39,
+    "category": "Maths",
+    "difficulty": "Normal",
+    "question": "What is the value of 5 + 3 * 2?",
+    "options":[
+      "-11",
+      "-12",
+      "-13",
+      "-14"
+    ],
+    "answer": "-11"
+  },
+  {
+    "id": 40,
+    "category": "Maths",
+    "difficulty": "Normal",
+    "question": "What is the value of 10 - 2 * 3?",
+    "options":[
+      "-1",
+      "-2",
+      "-3",
+      "-4"
+    ],
+    "answer": "-1"
   }
 ]
