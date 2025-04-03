@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
-import '../styles/EnglishQuiz.css';
+import '../styles/English.css';
 
 export default function EnglishQuiz() {
   const [questions, setQuestions] = useState([]);
@@ -62,20 +62,14 @@ export default function EnglishQuiz() {
     setCorrectAnswer("");
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
   };
-  if(correctAnswers > 19) return <div className="progress-bar color-lightblue"></div>
-  const progress = (currentQuestionIndex / questions.length) * 100;
 
   
   return (
     <>
       <main><header><br /><br /></header>
       <center>
+        <div className="english-quiz-container">
         <h1 className="english-h1">English Quiz</h1>
-
-        {/* Progress Bar */}
-        <div className="progress-bar-container">
-          <div className="progress-bar" style={{ width: `${progress}%` }}></div>
-        </div>
         
         <h2 className="question">{question.question}</h2>
         <div className="options-grid mt-4">
@@ -115,6 +109,7 @@ export default function EnglishQuiz() {
         <Link to="/categorySelection">
           <button className="back-button">Back</button>
         </Link>
+        </div>
         </center>
       </main>
     </>

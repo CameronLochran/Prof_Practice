@@ -22,14 +22,10 @@ const QuizCategoryAndDifficulty = () => {
       <div className="home-container">
         
         
-        <div className="progress-bar-container">
-          <div className="progress" style={{ width: `${progress}%` }} ></div>
-        
+        <p className='software-current-progress'>Current Progress: {progress}%</p>
+        <p className='maths-current-progress'>Current Progress: {progress}%</p>
+        <p className='english-current-progress'>Current Progress: {progress}%</p>
 
-
-        {/* Display the current progress */}
-        <p>Current Progress: {progress}%</p>
-      
         </div>
       {/* Button to Start the Software Quiz */}
       <section class = "content">
@@ -41,13 +37,15 @@ const QuizCategoryAndDifficulty = () => {
       <Link to="/mathsquiz">
         <button className="maths-button">Maths</button>
       </Link><br /><br />
+      <Link to="/englishquiz">
+        <button className="english-button">English</button>
+      </Link><br /><br />
       </section>
 
       <Link to="/">
         <button className="back-button">Back</button>
       </Link>
     
-    </div>
     </div>
     </main>
   );

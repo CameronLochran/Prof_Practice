@@ -3,6 +3,7 @@ import StartPage from "./components/StartPage"
 import QuizCategoryAndDifficulty from "./components/quizCategoryAndDifficulty"
 import SoftwareQuiz from "./components/SoftwareQuiz"
 import MathsQuiz from "./components/MathsQuiz"
+import EnglishQuiz from "./components/English"
 
 function App() {
   
@@ -17,6 +18,7 @@ function App() {
           <Route path="/categorySelection" element={<QuizCategoryAndDifficulty/>}/>
           <Route path="/softwarequiz" element={<SoftwareQuiz/>}/>
           <Route path="/mathsquiz" element={<MathsQuiz/>}/>
+          <Route path="/englishquiz" element={<EnglishQuiz/>}/>
         </Routes>
       </Router>
       </center>
