@@ -473,12 +473,12 @@
     "difficulty": "Normal",
     "question": "What is the value of 10^3?",
     "options":[
-      "-1000",
-      "-2000",
-      "-3000",
-      "-4000"
+      "1000",
+      "2000",
+      "3000",
+      "4000"
     ],
-    "answer": "-1000"
+    "answer": "1000"
   },
   {
     "id": 38,
@@ -486,12 +486,12 @@
     "difficulty": "Normal",
     "question": "What is the value of 3 + 4 * 2?",
     "options":[
-      "-11",
-      "-12",
-      "-13",
-      "-14"
+      "11",
+      "12",
+      "13",
+      "14"
     ],
-    "answer": "-11"
+    "answer": "11"
   },
   {
     "id": 39,
@@ -499,12 +499,12 @@
     "difficulty": "Normal",
     "question": "What is the value of 5 + 3 * 2?",
     "options":[
-      "-11",
-      "-12",
-      "-13",
-      "-14"
+      "11",
+      "12",
+      "13",
+      "14"
     ],
-    "answer": "-11"
+    "answer": "11"
   },
   {
     "id": 40,
@@ -518,5 +518,425 @@
       "-4"
     ],
     "answer": "-1"
-  }
+  },
+  {
+    "id": 41,
+    "category": "English",
+    "difficulty": "Normal",
+    "question": "What is the past participle of 'Begin'?",
+    "options": ["Began", "Begun", "Beginning", "Begins"],
+    "answer": "Begun"
+  },
+  {
+    "id": 42,
+    "category": "English",
+    "difficulty": "Normal",
+    "question": "What is the past participle of 'Write'?",
+    "options": ["Writing", "Wrote", "Written", "Writes"],
+    "answer": "Written"
+  },
+  {
+    "id": 43,
+    "category": "English",
+    "difficulty": "Normal",
+    "question": "What is the past participle of 'Eat'?",
+    "options": ["Ate", "Eaten", "Eats", "Eating"],
+    "answer": "Eaten"
+  },
+  {
+    "id": 44,
+    "category": "English",
+    "difficulty": "Normal",
+    "question": "What is the past participle of 'See'?",
+    "options": ["Seen", "Saw", "Seeing", "Sees"],
+    "answer": "Seen"
+  },
+  {
+    "id": 45,
+    "category": "English",
+    "difficulty": "Normal",
+    "question": "What is the past participle of 'Take'?",
+    "options": ["Taked", "Took", "Taken", "Takes"],
+    "answer": "Taken"
+  },
+  {
+    "id": 46,
+    "category": "English",
+    "difficulty": "Normal",
+    "question": "What is the past participle of 'Go'?",
+    "options": ["Gone", "Went", "Goes", "Going"],
+    "answer": "Gone"
+  },
+  {
+    "id": 47,
+    "category": "English",
+    "difficulty": "Normal",
+    "question": "What is the past participle of 'Speak'?",
+    "options": ["Speaking", "Spoke", "Spoken", "Speaks"],
+    "answer": "Spoken"
+  },
+  {
+    "id": 48,
+    "category": "English",
+    "difficulty": "Normal",
+    "question": "What is the past participle of 'Break'?",
+    "options": ["Broken", "Broke", "Breaks", "Breaking"],
+    "answer": "Broken"
+  },
+  {
+    "id": 49,
+    "category": "English",
+    "difficulty": "Normal",
+    "question": "What is the past participle of 'Choose'?",
+    "options": ["Chose", "Chosen", "Choosing", "Chooses"],
+    "answer": "Chosen"
+  },
+  {
+    "id": 50,
+    "category": "English",
+    "difficulty": "Normal",
+    "question": "What is the past participle of 'Drive'?",
+    "options": ["Drove", "Driven", "Driving", "Drived"],
+    "answer": "Driven"
+  },
+  {
+    "id": 51,
+    "category": "English",
+    "difficulty": "Normal",
+    "question": "What is the homonym of 'The noise a dog makes / grows on a tree'?",
+    "options": ["Leaf", "Howl", "Bark", "Yell"],
+    "answer": "Bark"
+  },
+  {
+    "id": 52,
+    "category": "English",
+    "difficulty": "Normal",
+    "question": "What is the homonym of 'A flying mammal / a piece of sports equipment'?",
+    "options": ["Bat", "Net", "Crane", "Club"],
+    "answer": "Bat"
+  },
+  {
+    "id": 53,
+    "category": "English",
+    "difficulty": "Normal",
+    "question": "What is the homonym of 'To strike with a foot / a tool used for imprinting a mark'?",
+    "options": ["Seal", "Stamp", "Press", "Mark"],
+    "answer": "Stamp"
+  },
+  {
+    "id": 54,
+    "category": "English",
+    "difficulty": "Normal",
+    "question": "What is the homonym of 'A flying insect / something used to fasten clothing'?",
+    "options": ["Bee", "Tick", "Moth", "Fly"],
+    "answer": "Fly"
+  },
+  {
+    "id": 55,
+    "category": "English",
+    "difficulty": "Normal",
+    "question": "What is the homonym of 'The present moment / a flow of water'?",
+    "options": ["Tide", "Wave", "Current", "Now"],
+    "answer": "Current"
+  },
+  {
+    "id": 56,
+    "category": "English",
+    "difficulty": "Normal",
+    "question": "What is the homonym of 'A musical troupe / a ring of material'?",
+    "options": ["Band", "Chord", "Duet", "String"],
+    "answer": "Band"
+  },
+  {
+    "id": 57,
+    "category": "English",
+    "difficulty": "Normal",
+    "question": "What is the homonym of 'The sound a phone makes / circular jewellery'?",
+    "options": ["Band", "Ring", "Loop", "Chime"],
+    "answer": "Ring"
+  },
+  {
+    "id": 58,
+    "category": "English",
+    "difficulty": "Normal",
+    "question": "What is the homonym of 'A deep hole for water / to be in good health'?",
+    "options": ["Fountain", "Spring", "Strong", "Well"],
+    "answer": "Well"
+  },
+  {
+    "id": 59,
+    "category": "English",
+    "difficulty": "Normal",
+    "question": "What is the homonym of 'A counter for serving drinks / to disallow something'?",
+    "options": ["Tap", "Ban", "Bar", "Stop"],
+    "answer": "Bar"
+  },
+  {
+    "id": 60,
+    "category": "English",
+    "difficulty": "Normal",
+    "question": "What is the homonym of 'To have seen something / a tool for cutting wood'?",
+    "options": ["Slice", "Saw", "Splitter", "Gaze"],
+    "answer": "Saw"
+  },
+    {
+      "id": 61,
+      "category": "pccomponents",
+      "difficulty": "Normal",
+      "question": "What does RAM stand for?",
+      "options": [
+        "Racoons and Monkeys",
+        "Random Access Memory",
+        "Random Alert message",
+        "Readable Access Memory"
+      ],
+      "answer": "Random Access Memory"
+    },
+    {
+      "id": 62,
+      "category": "pccomponents",
+      "difficulty": "Normal",
+      "question": "What does ROM stand for?",
+      "options": [
+        "Read Only Memory",
+        "Read Only Message",
+        "Random Open Menu",
+        "Removable Option Menu"
+      ],
+      "answer": "Read Only Memory"
+    },
+    {
+      "id": 63,
+      "category": "pccomponents",
+      "difficulty": "Normal",
+      "question": "What does CPU stand for?",
+      "options": [
+        "Control Personal Units",
+        "Canopies Per User",
+        "Central Processing Unit",
+        "Copy Paste Username"
+      ],
+      "answer": "Central Processing Unit"
+    },
+    {
+      "id": 64,
+      "category": "pccomponents",
+      "difficulty": "Normal",
+      "question": "What does SSD stand for?",
+      "options": [
+        "Standard Solid Drive",
+        "Solid State Drive",
+        "Super Smart Device",
+        "Smart Solid Dancer"
+      ],
+      "answer": "Solid State Drive"
+    },
+    {
+      "id": 65,
+      "category": "pccomponents",
+      "difficulty": "Normal",
+      "question": "What does HDD stand for?",
+      "options": [
+        "Hard Disk Drive",
+        "Hot Dudes Drink",
+        "Horrible Drunk Driver",
+        "Hard Drive Disk"
+      ],
+      "answer": "Hard Disk Drive"
+    },
+    {
+      "id": 66,
+      "category": "pccomponents",
+      "difficulty": "Normal",
+      "question": "Is RAM Volatile?",
+      "options": [
+        "Yes",
+        "No",
+        "Volatile?",
+        "Depends"
+      ],
+      "answer": "Yes"
+    },
+    {
+      "id": 67,
+      "category": "pccomponents",
+      "difficulty": "Normal",
+      "question": "What is the main function of the CPU?",
+      "options": [
+        "Store Data",
+        "Make calculations and execute instructions",
+        "Manage network connections",
+        "Display Graphics"
+      ],
+      "answer": "Make calculations and execute instructions"
+    },
+    {
+      "id": 68,
+      "category": "pccomponents",
+      "difficulty": "Normal",
+      "question": "Which component is responsible for storing data in a computer?",
+      "options": [
+        "RAM",
+        "Hard Drive",
+        "GPU",
+        "Power Supply"
+      ],
+      "answer": "Hard Drive"
+    },
+    {
+      "id": 69,
+      "category": "pccomponents",
+      "difficulty": "Normal",
+      "question": "What does the motherboard do?",
+      "options": [
+        "Process Graphics",
+        "Control power supply",
+        "Connects all components together",
+        "Store data"
+      ],
+      "answer": "Connects all components together"
+    },
+    {
+      "id": 70,
+      "category": "pccomponents",
+      "difficulty": "Normal",
+      "question": "Which component is used to store data permanently in a computer?",
+      "options": [
+        "RAM",
+        "SSD",
+        "CPU",
+        "GPU"
+      ],
+      "answer": "SSD"
+    },
+    {
+      "id": 71,
+      "category": "pccomponents",
+      "difficulty": "Normal",
+      "question": "What is the purpose of the Power Supply Unit (PSU)?",
+      "options": [
+        "Store data",
+        "Provide electrical power to the computer",
+        "Process instructions",
+        "Display Images"
+      ],
+      "answer": "Provide electrical power to the computer"
+    },
+    {
+      "id": 72,
+      "category": "pccomponents",
+      "difficulty": "Normal",
+      "question": "Which of these is NOT a part of a computer cooling system?",
+      "options": [
+        "CPU Fan",
+        "Thermal paste",
+        "Heat Sink",
+        "Motherboard"
+      ],
+      "answer": "Motherboard"
+    },
+    {
+      "id": 73,
+      "category": "pccomponents",
+      "difficulty": "Normal",
+      "question": "What type of memory is used for booting up a computer?",
+      "options": [
+        "RAM",
+        "ROM",
+        "Cache",
+        "SSD"
+      ],
+      "answer": "ROM"
+    },
+    {
+      "id": 74,
+      "category": "pccomponents",
+      "difficulty": "Normal",
+      "question": "What is the function of the cooling fan in a computer?",
+      "options": [
+        "To process data",
+        "To display images",
+        "To keep the components cool",
+        "To provide electrical power"
+      ],
+      "answer": "To keep the components cool"
+    },
+    {
+      "id": 75,
+      "category": "pccomponents",
+      "difficulty": "Normal",
+      "question": "What is the main function of the motherboard?",
+      "options": [
+        "To store files",
+        "To connect the CPU, memory, and all other components",
+        "To generate power",
+        "To handle network connections"
+      ],
+      "answer": "To connect the CPU, memory, and all other components"
+    },
+    {
+      "id": 76,
+      "category": "pccomponents",
+      "difficulty": "Normal",
+      "question": "What is the role of a computer’s BIOS?",
+      "options": [
+        "Control the display",
+        "Perform calculations",
+        "Boot the computer and manage the hardware",
+        "Allow network access"
+      ],
+      "answer": "Boot the computer and manage the hardware"
+    },
+    {
+      "id": 77,
+      "category": "pccomponents",
+      "difficulty": "Normal",
+      "question": "What does Clock Speed mean in a CPU?",
+      "options": [
+        "The number of cores in the processor",
+        "The speed that the CPU executes instructions",
+        "The amount of memory in the CPU",
+        "The power consumption of the CPU"
+      ],
+      "answer": "The speed that the CPU executes instructions"
+    },
+    {
+      "id": 78,
+      "category": "pccomponents",
+      "difficulty": "Normal",
+      "question": "What is the purpose of the GPU in gaming?",
+      "options": [
+        "Manage power consumption",
+        "Process graphics and rendering",
+        "Control the motherboard",
+        "Store data permanently"
+      ],
+      "answer": "Process graphics and rendering"
+    },
+    {
+      "id": 79,
+      "category": "PCComponents",
+      "difficulty": "Normal",
+      "question": "Which of the following is a type of non-volatile memory?",
+      "options": [
+        "RAM",
+        "Cache",
+        "ROM",
+        "Virtual Memory"
+      ],
+      "answer": "ROM"
+    },
+    {
+      "id": 80,
+      "category": "PCComponents",
+      "difficulty": "Normal",
+      "question": "What is the function of the chipset on the motherboard?",
+      "options": [
+        "Process data",
+        "Control the communication between the CPU, memory and input/output devices",
+        "Store data",
+        "Provide power to computer"
+      ],
+      "answer": "Control the communication between the CPU, memory and input/output devices"
+    }
 ]
