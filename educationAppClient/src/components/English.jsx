@@ -7,111 +7,128 @@ export default function EnglishQuiz() {
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState("");
-  const [correctAnswer, setCorrectAnswer] = useState("");
-  const [correctAnswers, setCorrectAnswers] = useState(0); // Track correct answers
+  const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [quizCompleted, setQuizCompleted] = useState(false);
 
-  // Fetch questions and load progress
+  // Fetch questions on component mount and load saved progress
   useEffect(() => {
     fetch("http://localhost:3000/api/questions")
       .then((response) => response.json())
       .then((data) => {
-        if (Array.isArray(data)) {
-          const filteredQuestions = data.filter(
-            (q) => q.category === "English" && q.difficulty === "Normal"
-          );
-          setQuestions(filteredQuestions);
-        } else {
-          setQuestions([]);
-        }
+        const filteredQuestions = Array.isArray(data) 
+          ? data.filter((q) => q.category === "English" && q.difficulty === "Normal") 
+          : [];
+        setQuestions(filteredQuestions);
       })
       .catch((error) => console.error("Error fetching questions:", error));
 
-    // Load saved progress
-    const savedProgress = localStorage.getItem("quizProgress");
-    const savedCorrectAnswers = localStorage.getItem("correctAnswers");
+    const savedProgress = localStorage.getItem("englishQuizProgress");
+    const savedCorrectAnswers = localStorage.getItem("englishCorrectAnswers");
 
     if (savedProgress) setCurrentQuestionIndex(Number(savedProgress));
     if (savedCorrectAnswers) setCorrectAnswers(Number(savedCorrectAnswers));
   }, []);
 
-  // Save progress when currentQuestionIndex or correctAnswers change
+  // Update progress and score in localStorage when quiz progresses
   useEffect(() => {
-    localStorage.setItem("quizProgress", currentQuestionIndex);
-    localStorage.setItem("correctAnswers", correctAnswers);
-  }, [currentQuestionIndex, correctAnswers]);
+    localStorage.setItem("englishQuizProgress", currentQuestionIndex);
+    localStorage.setItem("englishCorrectAnswers", correctAnswers);
 
-  if (!questions.length) return <p className="text-center">Loading software questions...</p>;
-  if (currentQuestionIndex >= questions.length)
-    return <p className="text-center text-2xl font-bold">🎉 Quiz Completed! 🎉 You got {correctAnswers} correct.</p>;
+    if (currentQuestionIndex >= questions.length && !quizCompleted) {
+      setQuizCompleted(true);
+      localStorage.setItem("englishLatestScore", correctAnswers);
+
+      const bestScore = Number(localStorage.getItem("englishBestScore")) || 0;
+      if (correctAnswers > bestScore) {
+        localStorage.setItem("englishBestScore", correctAnswers);
+      }
+    }
+  }, [currentQuestionIndex, correctAnswers, questions, quizCompleted]);
+
+  if (!questions.length) return <p className="text-center">Loading English Questions...</p>;
+
+  if (currentQuestionIndex >= questions.length) {
+    return (
+      <div className="english-quiz-container">
+        <h1 className="english-h1">🎉 Quiz Completed! 🎉</h1>
+        <p className="text-2xl font-bold">You got {correctAnswers} correct answers.</p>
+        <Link to="/categorySelection">
+          <button className="back-button">Back to Categories</button>
+        </Link>
+      </div>
+    );
+  }
 
   const question = questions[currentQuestionIndex];
 
-  // Handle answer selection
   const handleAnswerSelect = (answer) => {
     setSelectedAnswer(answer);
-    setCorrectAnswer(question.answer);
-
     if (answer === question.answer) {
       setCorrectAnswers((prev) => prev + 1);
     }
   };
 
-  // Move to the next question
   const nextQuestion = () => {
     setSelectedAnswer("");
-    setCorrectAnswer("");
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
   };
 
-  
+  const progress = (currentQuestionIndex / questions.length) * 100;
+
   return (
-    <>
-      <main><header><br /><br /></header>
+    <main>
+      <header><br /><br /></header>
       <center>
         <div className="english-quiz-container">
-        <h1 className="english-h1">English Quiz</h1>
-        
-        <h2 className="question">{question.question}</h2>
-        <div className="options-grid mt-4">
-          {question.options.map((option, index) => (
-            <button
-              key={index}
-              onClick={() => handleAnswerSelect(option)}
-              className={`option-button ${
-                selectedAnswer
-                  ? option === correctAnswer
-                    ? "bg-green-500"
-                    : option === selectedAnswer
-                    ? "bg-red-500"
+          <h1 className="english-h1">English Quiz</h1>
+
+          {/* Progress Bar */}
+          <div className="english-progress-bar-container">
+            <div className="english-progress-bar" style={{ width: `${progress}%` }}></div>
+          </div>
+
+          <h2 className="question">{question.question}</h2>
+          <div className="options-grid">
+            {question.options.map((option, index) => (
+              <button
+                key={index}
+                onClick={() => handleAnswerSelect(option)}
+                className={`option-button ${
+                  selectedAnswer
+                    ? option === question.answer
+                      ? "bg-green-500"
+                      : option === selectedAnswer
+                      ? "bg-red-500"
+                      : "bg-gray-200"
                     : "bg-gray-200"
-                  : "bg-gray-200"
-              }`}
-              disabled={!!selectedAnswer}
-            >
-              {option}
+                }`}
+                disabled={!!selectedAnswer}
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+
+          {selectedAnswer && (
+            <p className="right-or-wrong">
+              {selectedAnswer === question.answer
+                ? "✅ Correct!"
+                : `❌ Wrong! The correct answer is: ${question.answer}`}
+            </p>
+          )}
+
+          {selectedAnswer && (
+            <button onClick={nextQuestion} className="next-question">
+              Next Question →
             </button>
-          ))}
+          )}
+
+          <br />
+          <Link to="/categorySelection">
+            <button className="back-button">Back</button>
+          </Link>
         </div>
-
-        {selectedAnswer && (
-          <p className="right-or-wrong">
-            {selectedAnswer === correctAnswer ? "✅ Correct!" : `❌ Wrong! The correct answer is: ${correctAnswer}`}
-          </p>
-        )}
-
-        {selectedAnswer && (
-          <button onClick={nextQuestion} className="next-question">
-            Next Question →
-          </button>
-        )}
-
-        <br />
-        <Link to="/categorySelection">
-          <button className="back-button">Back</button>
-        </Link>
-        </div>
-        </center>
-      </main>
-    </>
+      </center>
+    </main>
   );
 }

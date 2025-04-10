@@ -6,6 +6,7 @@
     text-align: center;
     background-image: linear-gradient(#CC6600, black);
     height: 100vh;
+    padding-bottom: 300px;
   }
   
   .options-grid {
@@ -21,6 +22,7 @@
   
   .option-button {
     padding: 12px;
+    padding-right: 100px;
     background-color: black;
     padding-top: 30px;
     padding-bottom: 30px;

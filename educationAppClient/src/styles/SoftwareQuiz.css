@@ -72,14 +72,14 @@
   }
   
   /* Progress Bar Styles */
-  .progress-bar-container {
-    width: 100%;
+  .software-progress-bar-container {
     height: 8px;
     background-color: #e0e0e0;
+    color: #009900;
     border-radius: 5px;
     margin-bottom: 20px;
     width: 40%;
-    align-self: center;
+    padding-left: 568px;
   }
   
   .progress-bar {
@@ -101,4 +101,7 @@
   main{
     text-align: center;
     background-image: linear-gradient(#009900, black);
+  }
+  .right-or-wrong {
+    color: white;
   }

@@ -1,16 +1,22 @@
-  .english-quiz-container {
+.pcComps-quiz-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
     text-align: center;
-    background-image: linear-gradient(#990000, black);
+    background-image: linear-gradient(#4C0099, black);
     height: 100vh;
   }
   
   .options-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 50px; /* Adds space between buttons */
-    opacity: 100%;
-    width: 80%;
-    padding-top: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
   }
   
   .option-button {
@@ -21,8 +27,8 @@
     border-radius: 8px;
     border: 3px solid black;
     text-align: center;
-    cursor: pointer;
     transition: background-color 0.3s, color 0.3s, opacity 0.3s;
+    color: rgb(0, 0, 0);
   }
   
   .option-button:hover {
@@ -30,6 +36,7 @@
     border: 3px solid black;
     color: white;
     opacity: 100;
+    cursor: pointer;
     
   }
   
@@ -89,12 +96,12 @@
     align-content: center;
     height: 100vh;
     text-align: center;
-    
+
   }
-  .english-h1{
+  .pcComps-h1{
     color: black;
-    padding-top: 100px;
   }
   header{
+    background-color: white;
     border-bottom: 3px solid black;
   }

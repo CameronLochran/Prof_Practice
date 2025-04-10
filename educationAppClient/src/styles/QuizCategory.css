@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start; /* Align everything to the left */
-  padding-left: 300px; /* Moves all content 300px from the left */
+  padding-left: 225px; /* Moves all content 300px from the left */
 }
 
 /* Header Styling */
@@ -50,7 +50,6 @@ p {
   background-image: linear-gradient(#009900, black);
   color: white;
   font-size: 16px;
-  border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s ease, transform 0.2s ease;
@@ -91,6 +90,21 @@ p {
   margin-top: 20px;
   margin-right: 175px;
   margin-left: 30px;
+}
+.pccomponents-button {
+  width: 150px;
+  height: 150px;
+  background-image: linear-gradient(#4C0099, black);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+  margin-right: 175px;
+  margin-left: 30px;
+  
 }
 .maths-button:hover {
   transform: scale(1.05);
@@ -143,6 +157,10 @@ p {
 }
 .english-current-progress {
   padding-left: 35%;
+}
+
+.score-display {
+  display: flex;
 }
 
 /* MEDIA QUERIES */
