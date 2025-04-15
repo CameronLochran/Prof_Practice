@@ -6,6 +6,7 @@
     text-align: center;
     background-image: linear-gradient(#4C0099, black);
     height: 100vh;
+    padding-bottom: 170px;
   }
   
   .options-grid {
@@ -63,7 +64,7 @@
   }
   
   .question {
-    color: black;
+    color: white;
   }
   
   #option-btn {
@@ -80,7 +81,7 @@
     height: 8px;
     background-color: #e0e0e0;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     width: 40%;
   }
   
@@ -96,8 +97,8 @@
     text-align: center;
 
   }
-  .pcComps-h1{
-    color: black;
+  .pccomponents-h1{
+    color: white;
   }
   header{
     background-color: white;

@@ -5,7 +5,7 @@ function App() {
   const [questions, setQuestions] = useState([]);
   const [filteredQuestions, setFilteredQuestions] = useState([]);
   const [newQuestion, setNewQuestion] = useState({
-    id: '',
+    id: null,
     category: '',
     difficulty: '',
     question: '',
@@ -30,15 +30,12 @@ function App() {
   // Filter function based on category and difficulty
   const filterQuestions = () => {
     let filtered = [...questions];
-
     if (categoryFilter) {
       filtered = filtered.filter((q) => q.category === categoryFilter);
     }
-
     if (difficultyFilter) {
       filtered = filtered.filter((q) => q.difficulty === difficultyFilter);
     }
-
     setFilteredQuestions(filtered);
   };
 
@@ -55,17 +52,37 @@ function App() {
 
   // Create: Add new question
   const addQuestion = () => {
-    const updatedQuestions = [...questions, { ...newQuestion, id: questions.length + 1 }];
-    setQuestions(updatedQuestions);
-    setFilteredQuestions(updatedQuestions);  // Update filtered questions as well
-    setNewQuestion({
-      id: '',
-      category: '',
-      difficulty: '',
-      question: '',
-      options: ['', '', '', ''],
-      answer: ''
-    });
+    const questionToAdd = { ...newQuestion, id: questions.length + 1 };
+  
+    fetch("http://localhost:3000/api/questions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(questionToAdd),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Failed to add question: ${response.status} - ${response.statusText}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        const updatedQuestions = [...questions, data];
+        setQuestions(updatedQuestions);
+        setFilteredQuestions(updatedQuestions);
+        setNewQuestion({
+          id: null,
+          category: '',
+          difficulty: '',
+          question: '',
+          options: ['', '', '', ''],
+          answer: ''
+        });
+      })
+      .catch((error) => {
+        console.error("Error posting new question:", error);
+      });  
   };
 
   // Update: Modify an existing question by ID
@@ -99,7 +116,6 @@ function App() {
     <div>
       <br /><br />
       <h1>Welcome Admin</h1>
-
       {/* Filters Section */}
       <br /><br />
       <div>
@@ -111,19 +127,19 @@ function App() {
           <option value="English">English</option>
           <option value="pccomponents">PC Components</option>
         </select>
-
         <select onChange={handleDifficultyChange} value={difficultyFilter}>
           <option value="">Any</option>
           <option value="Normal">Normal</option>
           <option value="Hard">Hard</option>
         </select>
       </div>
-
       {/* Create new question form */}
       <br /><br />
       <div>
         <h2>{editingQuestion ? 'Edit Question' : 'Add a New Question'}</h2>
+        <label htmlFor="category">Category:</label>
         <input
+          id="category"
           type="text"
           placeholder="Category"
           value={editingQuestion ? editingQuestion.category : newQuestion.category}
@@ -135,7 +151,9 @@ function App() {
             }
           }}
         />
+        <label htmlFor="difficulty">Difficulty:</label>
         <input
+          id="difficulty"
           type="text"
           placeholder="Difficulty"
           value={editingQuestion ? editingQuestion.difficulty : newQuestion.difficulty}
@@ -147,7 +165,9 @@ function App() {
             }
           }}
         />
+        <label htmlFor="question">Question:</label>
         <input
+          id="question"
           type="text"
           placeholder="Question"
           value={editingQuestion ? editingQuestion.question : newQuestion.question}
@@ -161,24 +181,29 @@ function App() {
         />
         <div>
           {Array.from({ length: 4 }).map((_, index) => (
-            <input
-              key={index}
-              type="text"
-              placeholder={`Option ${index + 1}`}
-              value={editingQuestion ? editingQuestion.options[index] : newQuestion.options[index]}
-              onChange={(e) => {
-                const options = editingQuestion ? [...editingQuestion.options] : [...newQuestion.options];
-                options[index] = e.target.value;
-                if (editingQuestion) {
-                  setEditingQuestion({ ...editingQuestion, options });
-                } else {
-                  setNewQuestion({ ...newQuestion, options });
-                }
-              }}
-            />
+            <div key={index}>
+              <label htmlFor={`option-${index}`}>Option {index + 1}:</label>
+              <input
+                id={`option-${index}`}
+                type="text"
+                placeholder={`Option ${index + 1}`}
+                value={editingQuestion ? editingQuestion.options[index] : newQuestion.options[index]}
+                onChange={(e) => {
+                  const options = editingQuestion ? [...editingQuestion.options] : [...newQuestion.options];
+                  options[index] = e.target.value;
+                  if (editingQuestion) {
+                    setEditingQuestion({ ...editingQuestion, options });
+                  } else {
+                    setNewQuestion({ ...newQuestion, options });
+                  }
+                }}
+              />
+            </div>
           ))}
         </div>
+        <label htmlFor="answer">Answer:</label>
         <input
+          id="answer"
           type="text"
           placeholder="Answer"
           value={editingQuestion ? editingQuestion.answer : newQuestion.answer}
@@ -201,12 +226,10 @@ function App() {
         >
           {editingQuestion ? 'Save Changes' : 'Add Question'}
         </button>
-
         {editingQuestion && (
           <button onClick={cancelEditing}>Cancel</button>
         )}
       </div>
-
       {/* Read: Display filtered questions */}
       <div>
         <h2>Questions List</h2>

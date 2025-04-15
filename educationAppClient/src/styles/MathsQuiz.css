@@ -84,7 +84,7 @@
     height: 8px;
     background-color: #e0e0e0;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     width: 40%;
   }
   
@@ -101,7 +101,7 @@
     
   }
   .maths-h1{
-    color: black;
+    color: white;
   }
   header{
     border-bottom: 3px solid black;

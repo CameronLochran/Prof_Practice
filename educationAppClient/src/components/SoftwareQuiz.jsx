@@ -17,7 +17,7 @@ export default function SoftwareQuiz() {
       .then((data) => {
         if (Array.isArray(data)) {
           const filteredQuestions = data.filter(
-            (q) => q.category === "Software Dev" && q.difficulty === "Normal"
+            (q) => q.category === "Software Dev" && q.difficulty === "Hard"
           );
           setQuestions(filteredQuestions);
         } else {

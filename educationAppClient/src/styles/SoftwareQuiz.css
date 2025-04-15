@@ -76,7 +76,7 @@
     background-color: #e0e0e0;
     color: #009900;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     width: 40%;
     margin-left: 490px;
   }
@@ -91,7 +91,7 @@
     height: 100vh;
   }
   .software-h1{
-    color: black;
+    color: white;
     padding-top: 100px;
   }
   header{
