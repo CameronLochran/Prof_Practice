@@ -8,6 +8,7 @@ export default function EnglishQuiz() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
   const [quizCompleted, setQuizCompleted] = useState(false);
 
   // Fetch questions on component mount and load saved progress
@@ -15,8 +16,8 @@ export default function EnglishQuiz() {
     fetch("http://localhost:3000/api/questions")
       .then((response) => response.json())
       .then((data) => {
-        const filteredQuestions = Array.isArray(data) 
-          ? data.filter((q) => q.category === "English" && q.difficulty === "Normal") 
+        const filteredQuestions = Array.isArray(data)
+          ? data.filter((q) => q.category === "English" && q.difficulty === "Normal")
           : [];
         setQuestions(filteredQuestions);
       })
@@ -24,9 +25,11 @@ export default function EnglishQuiz() {
 
     const savedProgress = localStorage.getItem("englishQuizProgress");
     const savedCorrectAnswers = localStorage.getItem("englishCorrectAnswers");
+    const savedBestScore = localStorage.getItem("englishBestScore");
 
     if (savedProgress) setCurrentQuestionIndex(Number(savedProgress));
     if (savedCorrectAnswers) setCorrectAnswers(Number(savedCorrectAnswers));
+    if (savedBestScore) setBestScore(Number(savedBestScore));
   }, []);
 
   // Update progress and score in localStorage when quiz progresses
@@ -38,9 +41,10 @@ export default function EnglishQuiz() {
       setQuizCompleted(true);
       localStorage.setItem("englishLatestScore", correctAnswers);
 
-      const bestScore = Number(localStorage.getItem("englishBestScore")) || 0;
-      if (correctAnswers > bestScore) {
+      const previousBest = Number(localStorage.getItem("englishBestScore")) || 0;
+      if (correctAnswers > previousBest) {
         localStorage.setItem("englishBestScore", correctAnswers);
+        setBestScore(correctAnswers);
       }
     }
   }, [currentQuestionIndex, correctAnswers, questions, quizCompleted]);
@@ -52,6 +56,7 @@ export default function EnglishQuiz() {
       <div className="english-quiz-container">
         <h1 className="english-h1">🎉 Quiz Completed! 🎉</h1>
         <p className="text-2xl font-bold">You got {correctAnswers} correct answers.</p>
+        <p className="text-xl">Best Score: {bestScore}</p>
         <Link to="/categorySelection">
           <button className="back-button">Back to Categories</button>
         </Link>

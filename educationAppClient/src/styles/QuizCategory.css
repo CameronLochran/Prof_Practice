@@ -162,6 +162,25 @@ p {
 .score-display {
   display: flex;
 }
+.score-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.score-card {
+  min-width: 200px;
+  background: #000000;
+  color: white;
+  opacity: 80%;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+
 
 /* MEDIA QUERIES */
 

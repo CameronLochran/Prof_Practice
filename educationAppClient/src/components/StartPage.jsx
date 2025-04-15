@@ -1,26 +1,36 @@
-import React from 'react'
-import QuizCategoryAndDifficulty from './quizCategoryAndDifficulty'
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/StartPage.css';
 
 const StartPage = () => {
+  const navigate = useNavigate();
 
-    return(
-        <main>
-            <body class= "welcome">
-                
-            
-        <section class="welcometext">  
-        
-            <h1>WFLS PRESENTS!!!</h1>
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      const isCtrlOrCmd = event.ctrlKey || event.metaKey;
+      if (isCtrlOrCmd && event.key.toLowerCase() === 'a') {
+        event.preventDefault();
+        navigate('/admin');
+      }
+    };
 
-            <a class="enterbutton" href= "/categorySelection" className='enter-link'>Press to enter{QuizCategoryAndDifficulty}</a>
+    window.addEventListener('keydown', handleKeyDown);
 
-        </section>
-        
-            </body>
-        </main>
-    )
-    
-}
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [navigate]);
 
-export default StartPage
+  return (
+    <main className="welcome">
+      <section className="welcometext">
+        <h1>WFLS PRESENTS!!!</h1>
+        <a className="enter-link" href="/categorySelection">
+          Press to enter
+        </a>
+      </section>
+    </main>
+  );
+};
+
+export default StartPage;

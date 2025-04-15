@@ -5,6 +5,8 @@ import SoftwareQuiz from "./components/SoftwareQuiz"
 import MathsQuiz from "./components/MathsQuiz"
 import EnglishQuiz from "./components/English"
 import PcComponents from "./components/PcComponents"
+import AdminPage from "./components/AdminPage"
+import AdminLogin from "./components/AdminLogin"
 
 function App() {
   
@@ -20,6 +22,8 @@ function App() {
             <Route path="/mathsquiz" element={<MathsQuiz/>}/>
             <Route path="/englishquiz" element={<EnglishQuiz/>}/>
             <Route path="/pccomponents" element={<PcComponents/>}/>
+            <Route path="/admin" element={<AdminLogin/>}/>
+            <Route path="/admindetails" element={<AdminPage/>}/>
           </Routes>
         </Router>
       </center>
