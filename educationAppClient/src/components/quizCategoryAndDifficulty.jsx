@@ -6,7 +6,7 @@ const QuizCategoryAndDifficulty = () => {
   const [scores, setScores] = useState({
     software: { latest: null, best: null },
     maths: { latest: null, best: null },
-    english: { latest: 0, best: 0 },
+    english: { latest: null, best: null },
     pccomponents: { latest: null, best: null },
   });
 
@@ -22,10 +22,11 @@ const QuizCategoryAndDifficulty = () => {
       };
     };
 
+    // Ensure all prefix keys are consistent with how they're saved in other quiz files
     setScores({
       software: loadScores("software"),
       maths: loadScores("maths"),
-      english: loadScores("english"), // Ensure the key matches "english"
+      english: loadScores("english"),
       pccomponents: loadScores("pccomponents"),
     });
   }, []);
@@ -33,19 +34,10 @@ const QuizCategoryAndDifficulty = () => {
   const ScoreCard = ({ title, data }) => (
     <div className="score-card">
       <h3>{title}</h3>
-      {data.latest !== null ? (
-        <p><strong>Previous Score:</strong> {data.latest}</p>
-      ) : (
-        <p><strong>Previous Score:</strong> -</p>
-      )}
-      {data.best !== null ? (
-        <p><strong>Best Score:</strong> {data.best}</p>
-      ) : (
-        <p><strong>Best Score:</strong> -</p>
-      )}
+      <p><strong>Previous Score:</strong> {data.latest !== null ? data.latest : '-'}</p>
+      <p><strong>Best Score:</strong> {data.best !== null ? data.best : '-'}</p>
     </div>
-  )
-
+  );
 
   return (
     <main>
