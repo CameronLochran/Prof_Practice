@@ -1,3 +1,4 @@
+/* General Styles */
 .quizcategory {
   font-family: 'Arial', sans-serif;
   background-image: linear-gradient(white, grey);
@@ -7,11 +8,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; /* Align everything to the left */
-  padding-left: 225px; /* Moves all content 300px from the left */
+  align-items: center;
+  padding: 20px;
 }
 
-/* Header Styling */
+.quizcategory {
+  @media (max-width: 768px) {
+    padding-left: 20px;
+  }
+}
+
 h1, h2 {
   color: #2d3748;
 }
@@ -20,32 +26,37 @@ p {
   display: flex;
   padding-top: 10px;
   justify-content: center;
-  
 }
 
-/* Progress Bar Container */
-.progress-bar{
-  width: 300px; /* Adjust width */
+/* Progress Bar */
+.progress-bar {
+  width: 300px;
   height: 20px;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 25px;
-
-  height: 100%;
-  background-color: #00ffff; /* Default progress color */
+  background-color: #00ffff;
   transition: width 0.4s ease-in-out;
 }
 
-/* Progress Text */
 .progress-text {
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
-/* Software Button */
-.software-button {
-  width: 150px;
+/* Buttons */
+button {
+  flex: 1;
+  margin: 0 10px;
+  padding-left: 20px;
+}
+
+.software-button, 
+.maths-button, 
+.english-button, 
+.pccomponents-button {
+  width: 200px;
   height: 150px;
   background-image: linear-gradient(#009900, black);
   color: white;
@@ -53,64 +64,16 @@ p {
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s ease, transform 0.2s ease;
-  margin-top: 20px;
-  margin-right: 175px;
-  margin-left: 30px;
+  margin: 0;
 }
 
-.software-button:hover {
+.software-button:hover,
+.maths-button:hover,
+.english-button:hover,
+.pccomponents-button:hover {
   transform: scale(1.05);
 }
 
-.maths-button{
-  width: 150px;
-  height: 150px;
-  background-image: linear-gradient(#CC6600, black);
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s ease, transform 0.2s ease;
-  margin-top: 20px;
-  margin-right: 175px;
-  margin-left: 30px;
-}
-
-.english-button {
-  width: 150px;
-  height: 150px;
-  background-image: linear-gradient(#990000, black);
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s ease, transform 0.2s ease;
-  margin-top: 20px;
-  margin-right: 175px;
-  margin-left: 30px;
-}
-.pccomponents-button {
-  width: 150px;
-  height: 150px;
-  background-image: linear-gradient(#4C0099, black);
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s ease, transform 0.2s ease;
-  margin-top: 20px;
-  margin-right: 175px;
-  margin-left: 30px;
-  
-}
-.maths-button:hover {
-  transform: scale(1.05);
-}
-
-/* Back Button */
 .back-button {
   width: 120px;
   height: 40px;
@@ -121,16 +84,10 @@ p {
   border-radius: 20px;
   cursor: pointer;
   transition: 0.3s ease, transform 0.2s ease;
-  margin-top: 20px;
-  position:absolute;
   margin-top: 90px;
-  left: 47.5%;
-}
-.english-button:hover {
-  transform: scale(1.05);
-}
-.pccomponents-button:hover {
-  transform: scale(1.05);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .back-button:hover {
@@ -138,67 +95,76 @@ p {
   transform: scale(1.05);
 }
 
-/* Layout Fixes */
-.software {
+/* Layout */
+.software, .content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Ensures everything is aligned left */
+  align-items: flex-start;
 }
 
 .content {
-  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  padding: 0 20px;
 }
 
 .heading {
+  text-align: center;
   align-self: center;
-  padding-right: 230px;
 }
 
-.software-current-progress {
-  padding-left: 35%;
-}
-.maths-current-progress {
-  padding-left: 35%;
-}
+/* Progress Indicators */
+.software-current-progress,
+.maths-current-progress,
 .english-current-progress {
   padding-left: 35%;
 }
 
+/* Score Display */
 .score-display {
   display: flex;
 }
+
 .score-row {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  gap: 100px;
 }
 
 .score-card {
+  width: 200px;
   min-width: 200px;
   background: #000000;
   color: white;
   opacity: 80%;
   padding: 16px;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
+  margin: 0 10px;
+  flex: 1;
 }
 
-.selecting-difficulty{
+/* Buttons Row */
+.buttons-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* Difficulty Selector */
+.selecting-difficulty {
   margin-left: 590px;
   padding: 5px;
   border-radius: 20px;
   margin-bottom: 50px;
 }
-
-/* MEDIA QUERIES */
-
-/* Responsive Fixes */
-@media (max-width: 768px) {
-  .quizcategory {
-      padding-left: 20px; /* Adjust left position for smaller screens */
-  }
-}
-
-

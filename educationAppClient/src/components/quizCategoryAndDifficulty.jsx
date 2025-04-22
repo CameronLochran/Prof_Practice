@@ -41,37 +41,28 @@ const QuizCategoryAndDifficulty = () => {
 
   return (
     <main>
-      <div className='quizcategory'>
-        <h1 className='heading'>Select Quiz and Difficulty</h1>
+      <div className="quizcategory">
+        <h1 className="heading">Select Quiz and Difficulty</h1>
         <br /><br />
 
-        <div className="scores-for-subjects">
+        <div className="content">
           <div className="score-row">
             <ScoreCard title="Software" data={scores.software} />
             <ScoreCard title="Maths" data={scores.maths} />
             <ScoreCard title="English" data={scores.english} />
             <ScoreCard title="PC Components" data={scores.pccomponents} />
           </div>
+          <div className="buttons-row">
+            <button className="software-button">Software</button>
+            <button className="maths-button">Maths</button>
+            <button className="english-button">English</button>
+            <button className="pccomponents-button">PC Components</button>
+          </div>
         </div>
 
-        <section className="content">
-          <Link to="/softwarequiz">
-            <button className="software-button">Software</button>
-          </Link><br /><br />
-          <Link to="/mathsquiz">
-            <button className="maths-button">Maths</button>
-          </Link><br /><br />
-          <Link to="/englishquiz">
-            <button className="english-button">English</button>
-          </Link><br /><br />
-          <Link to="/pccomponents">
-            <button className="pccomponents-button">PC Components</button>
-          </Link><br /><br />
-        </section>
-
-        <Link to="/">
+        <a href="/">
           <button className="back-button">Back</button>
-        </Link>
+        </a>
       </div>
     </main>
   );
