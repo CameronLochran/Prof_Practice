@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import '../styles/SoftwareQuiz.css';
 
-export default function SoftwareQuiz() {
+export default function SoftwareQuizHard() {
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState("");
@@ -17,7 +17,7 @@ export default function SoftwareQuiz() {
       .then((data) => {
         if (Array.isArray(data)) {
           const filteredQuestions = data.filter(
-            (q) => q.category === "Software Dev" && q.difficulty === "Normal"
+            (q) => q.category === "Software Dev" && q.difficulty === "Hard"
           );
           setQuestions(filteredQuestions);
         } else {
@@ -25,7 +25,7 @@ export default function SoftwareQuiz() {
         }
       })
       .catch((error) => console.error("Error fetching questions:", error));
-  }, []); // Re-fetch when difficulty changes
+  }, [selectedDifficulty]); // Re-fetch when difficulty changes
 
   useEffect(() => {
     localStorage.setItem("softwareQuizProgress", currentQuestionIndex);

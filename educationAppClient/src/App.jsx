@@ -7,15 +7,17 @@ import EnglishQuiz from "./components/English"
 import PcComponents from "./components/PcComponents"
 import AdminPage from "./components/AdminPage"
 import AdminLogin from "./components/AdminLogin"
+import SoftwareQuizHard from "./components/SoftwareHard"
+import MathsQuizHard from "./components/MathsQuizHard"
+import PcComponentsQuizHard from "./components/PcComponentsHard"
+import EnglishQuizHard from "./components/EnglishQuizHard"
 
 function App() {
-  
-
   return (
     <>
       <center>
         <Router>
-        <Routes>
+          <Routes>
             <Route path="/" element={<StartPage/>}/>
             <Route path="/categorySelection" element={<QuizCategoryAndDifficulty/>}/>
             <Route path="/softwarequiz" element={<SoftwareQuiz/>}/>
@@ -24,6 +26,10 @@ function App() {
             <Route path="/pccomponents" element={<PcComponents/>}/>
             <Route path="/admin" element={<AdminLogin/>}/>
             <Route path="/admindetails" element={<AdminPage/>}/>
+            <Route path="/softwarequizhard" element={<SoftwareQuizHard/>}/>
+            <Route path="/mathsquizhard" element={<MathsQuizHard/>}/>
+            <Route path="/englishquizhard" element={<EnglishQuizHard/>}/>
+            <Route path="/pccomponentshard" element={<PcComponentsQuizHard/>}/>
           </Routes>
         </Router>
       </center>

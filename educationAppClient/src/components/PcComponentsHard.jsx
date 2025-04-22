@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
-import '../styles/SoftwareQuiz.css';
+import '../styles/PcComponents.css';
 
-export default function SoftwareQuiz() {
+export default function PcComponentsQuizHard() {
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState("");
@@ -17,7 +17,7 @@ export default function SoftwareQuiz() {
       .then((data) => {
         if (Array.isArray(data)) {
           const filteredQuestions = data.filter(
-            (q) => q.category === "Software Dev" && q.difficulty === "Normal"
+            (q) => q.category === "pccomponents" && q.difficulty === "Normal"
           );
           setQuestions(filteredQuestions);
         } else {
@@ -25,30 +25,36 @@ export default function SoftwareQuiz() {
         }
       })
       .catch((error) => console.error("Error fetching questions:", error));
-  }, []); // Re-fetch when difficulty changes
+
+    const savedProgress = localStorage.getItem("pccomponentsQuizProgress");
+    const savedCorrectAnswers = localStorage.getItem("pccomponentsCorrectAnswers");
+
+    if (savedProgress) setCurrentQuestionIndex(Number(savedProgress));
+    if (savedCorrectAnswers) setCorrectAnswers(Number(savedCorrectAnswers));
+  }, []);
 
   useEffect(() => {
-    localStorage.setItem("softwareQuizProgress", currentQuestionIndex);
-    localStorage.setItem("softwareCorrectAnswers", correctAnswers);
+    localStorage.setItem("pccomponentsQuizProgress", currentQuestionIndex);
+    localStorage.setItem("pccomponentsCorrectAnswers", correctAnswers);
 
     // Save score when quiz completes
     if (questions.length && currentQuestionIndex >= questions.length && !quizCompleted) {
       setQuizCompleted(true);
-      localStorage.setItem("softwareLatestScore", correctAnswers);
+      localStorage.setItem("pccomponentsLatestScore", correctAnswers);
 
-      const bestScore = Number(localStorage.getItem("softwareBestScore")) || 0;
+      const bestScore = Number(localStorage.getItem("pccomponentsBestScore")) || 0;
       if (correctAnswers > bestScore) {
-        localStorage.setItem("softwareBestScore", correctAnswers);
+        localStorage.setItem("pccomponentsBestScore", correctAnswers);
       }
     }
   }, [currentQuestionIndex, correctAnswers, questions, quizCompleted]);
 
-  if (!questions.length) return <p className="text-center">Loading Software Questions...</p>;
+  if (!questions.length) return <p className="text-center">Loading PC Components Questions...</p>;
 
   if (currentQuestionIndex >= questions.length) {
     return (
-      <div className="software-quiz-container">
-        <h1 className="software-h1">🎉 Quiz Completed! 🎉</h1>
+      <div className="pccomponents-quiz-container">
+        <h1 className="pccomponents-h1">🎉 Quiz Completed! 🎉</h1>
         <p className="text-2xl font-bold">You got {correctAnswers} correct.</p>
         <Link to="/categorySelection">
           <button className="back-button">Back to Categories</button>
@@ -81,12 +87,12 @@ export default function SoftwareQuiz() {
       <main>
         <header><br/><br/></header>
         <center>
-          <div className="software-quiz-container">
-            <h1 className="software-h1">Software Quiz</h1>
+          <div className="pccomponents-quiz-container">
+            <h1 className="pccomponents-h1">PC Components Quiz</h1>
 
             {/* Progress Bar */}
-            <div className="software-progress-bar-container">
-              <div className="software-progress-bar" style={{ width: `${progress}%` }}></div>
+            <div className="pccomponents-progress-bar-container">
+              <div className="pccomponents-progress-bar" style={{ width: `${progress}%` }}></div>
             </div>
 
             <h2 className="question">{question.question}</h2>

@@ -124,8 +124,13 @@ p {
   margin-top: 20px;
   position:absolute;
   margin-top: 90px;
-  left: 46.2%;
- 
+  left: 47.5%;
+}
+.english-button:hover {
+  transform: scale(1.05);
+}
+.pccomponents-button:hover {
+  transform: scale(1.05);
 }
 
 .back-button:hover {
@@ -180,7 +185,12 @@ p {
   text-align: center;
 }
 
-
+.selecting-difficulty{
+  margin-left: 590px;
+  padding: 5px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
 
 /* MEDIA QUERIES */
 
