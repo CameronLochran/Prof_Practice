@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import AdminPage from './AdminPage';
 import { useNavigate } from 'react-router-dom';
 
 const AdminLogin = () => {
@@ -11,7 +10,7 @@ const AdminLogin = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (username === 'admin' && password === 'weecameronxo') {
+    if (username === 'admin' && password === 'churros') {
       navigate('/admindetails')
     } else {
       setMessage('❌ Invalid username or password.');

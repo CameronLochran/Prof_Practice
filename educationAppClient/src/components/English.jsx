@@ -8,6 +8,7 @@ export default function EnglishQuiz() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [latestScore, setLatestScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [quizCompleted, setQuizCompleted] = useState(false);
 
@@ -26,7 +27,9 @@ export default function EnglishQuiz() {
     const savedProgress = localStorage.getItem("englishQuizProgress");
     const savedCorrectAnswers = localStorage.getItem("englishCorrectAnswers");
     const savedBestScore = localStorage.getItem("englishBestScore");
+    const savedLatestScore = localStorage.getItem("englishLatestScore");
 
+    if (savedLatestScore) setLatestScore(Number(savedLatestScore));
     if (savedProgress) setCurrentQuestionIndex(Number(savedProgress));
     if (savedCorrectAnswers) setCorrectAnswers(Number(savedCorrectAnswers));
     if (savedBestScore) setBestScore(Number(savedBestScore));
@@ -40,7 +43,8 @@ export default function EnglishQuiz() {
     if (currentQuestionIndex >= questions.length && !quizCompleted) {
       setQuizCompleted(true);
       localStorage.setItem("englishLatestScore", correctAnswers);
-
+      setLatestScore(correctAnswers); // <- Update state
+    
       const previousBest = Number(localStorage.getItem("englishBestScore")) || 0;
       if (correctAnswers > previousBest) {
         localStorage.setItem("englishBestScore", correctAnswers);
@@ -56,7 +60,9 @@ export default function EnglishQuiz() {
       <div className="english-quiz-container">
         <h1 className="english-h1">🎉 Quiz Completed! 🎉</h1>
         <p className="text-2xl font-bold">You got {correctAnswers} correct answers.</p>
+        <p className="text-xl">Latest Score: {latestScore}</p>
         <p className="text-xl">Best Score: {bestScore}</p>
+
         <Link to="/categorySelection">
           <button className="back-button">Back to Categories</button>
         </Link>

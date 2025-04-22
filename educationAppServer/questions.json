@@ -929,7 +929,7 @@
     {
       "id": 80,
       "category": "PCComponents",
-      "difficulty": "Normal",
+      "difficulty": "Hard",
       "question": "What is the function of the chipset on the motherboard?",
       "options": [
         "Process data",
