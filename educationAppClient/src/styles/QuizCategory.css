@@ -58,13 +58,28 @@ button {
 .pccomponents-button {
   width: 200px;
   height: 150px;
-  background-image: linear-gradient(#009900, black);
   color: white;
   font-size: 16px;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s ease, transform 0.2s ease;
   margin: 0;
+}
+
+.maths-button {
+  background-image: linear-gradient(to bottom, #CC6600, #18141D);
+}
+
+.english-button {
+  background-image: linear-gradient(to bottom, #990000, #18141D);
+}
+
+.pccomponents-button {
+  background-image: linear-gradient(to bottom, #4C0099, #18141D);
+}
+
+.software-button {
+  background-image: linear-gradient(to bottom, #009900, #18141D);
 }
 
 .software-button:hover,
@@ -88,11 +103,12 @@ button {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  transform-origin: center; 
 }
 
 .back-button:hover {
   background-color: #c82333;
-  transform: scale(1.05);
+  transform: translateX(-50%) scale(1.05);
 }
 
 /* Layout */
