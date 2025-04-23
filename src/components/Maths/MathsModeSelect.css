@@ -1,0 +1,12 @@
+.maths-mode-selector{
+    background-image: linear-gradient(#CC6600, black);
+    height: 100vh;
+}
+.maths-mode-h1{
+    color: white;
+    text-align: center;
+    padding-top: 250px;
+}
+.maths-mode-buttons{
+    padding-left: 30px;
+}

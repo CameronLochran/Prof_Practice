@@ -1,0 +1,29 @@
+.enter-link{
+    color: black;
+}
+.enter-link:hover{
+    color: black;
+    transition: 0.5 ease-in-out;
+}
+.quiz-container {
+  text-align: center;
+}
+
+.welcome{
+  background-image: linear-gradient(white, grey);
+}
+
+.welcometext {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.software-button{
+  border: 1px solid black;
+}
+.back-button{
+  border: 1px solid black;
+}
+button:hover{
+  border: 1px solid black
+}

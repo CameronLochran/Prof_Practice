@@ -1,0 +1,12 @@
+.english-mode-selector{
+    background-image: linear-gradient(#990000, black);
+    height: 100vh;
+}
+.english-mode-h1{
+    color: white;
+    text-align: center;
+    padding-top: 250px;
+}
+.english-mode-buttons{
+    padding-left: 30px;
+}
