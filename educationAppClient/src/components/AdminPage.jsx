@@ -12,7 +12,7 @@ function App() {
     options: ['', '', '', ''],
     answer: ''
   });
-  const [categoryFilter, setCategoryFilter] = useState('');
+  const [categoryFilter, setCategoryFilter] = useState('');//
   const [difficultyFilter, setDifficultyFilter] = useState('');
   const [editingQuestion, setEditingQuestion] = useState(null);  // State for editing
 
