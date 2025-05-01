@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import '../styles/QuizCategory.css';
 
 const QuizCategoryAndDifficulty = () => {
+  // State to hold the latest and best scores for each quiz category
   const [scores, setScores] = useState({
     software: { latest: null, best: null },
     maths: { latest: null, best: null },
@@ -10,56 +11,55 @@ const QuizCategoryAndDifficulty = () => {
     pccomponents: { latest: null, best: null },
   });
 
-  const navigate = useNavigate();
-
+  // useEffect hook to load the scores from localStorage when the component mounts
   useEffect(() => {
+    // Function to load latest and best scores for each quiz category from localStorage
     const loadScores = (prefix) => {
+      // Retrieve the latest and best score from localStorage for the given quiz category
       const latest = localStorage.getItem(`${prefix}LatestScore`);
       const best = localStorage.getItem(`${prefix}BestScore`);
+      // If scores exist in localStorage, convert them to numbers, otherwise set as null
       return {
         latest: latest !== null ? Number(latest) : null,
         best: best !== null ? Number(best) : null,
       };
     };
 
-    // Ensure all prefix keys are consistent with how they're saved in other quiz files
+    // Load scores for all quiz categories and update the state
     setScores({
-      software: loadScores("software"),
-      maths: loadScores("maths"),
-      english: loadScores("english"),
-      pccomponents: loadScores("pccomponents"),
+      software: loadScores("software"),   // For software quiz category
+      maths: loadScores("maths"),         // For maths quiz category
+      english: loadScores("english"),     // For English quiz category
+      pccomponents: loadScores("pccomponents"), // For PC components quiz category
     });
-  }, []);
-
-  const ScoreCard = ({ title, data }) => (
-    <div className="score-card">
-      <h3>{title}</h3>
-      <p><strong>Previous Score:</strong> {data.latest !== null ? data.latest : '-'}</p>
-      <p><strong>Best Score:</strong> {data.best !== null ? data.best : '-'}</p>
-    </div>
-  );
+  }, []); // This effect runs only once when the component is mounted
 
   return (
     <main>
       <div className="quizcategory">
-        <h1 className="heading">Select Quiz and Difficulty</h1>
+        {/* Heading for the quiz category selection */}
+        <h1 className="heading">Select Quiz</h1>
         <br /><br />
-
+        
         <div className="content">
-          <div className="score-row">
-            <ScoreCard title="Software" data={scores.software} />
-            <ScoreCard title="Maths" data={scores.maths} />
-            <ScoreCard title="English" data={scores.english} />
-            <ScoreCard title="PC Components" data={scores.pccomponents} />
-          </div>
           <div className="buttons-row">
-            <button className="software-button">Software</button>
-            <button className="maths-button">Maths</button>
-            <button className="english-button">English</button>
-            <button className="pccomponents-button">PC Components</button>
+            {/* Links to the various quiz categories */}
+            <Link to="/softwarequizmode">
+              <button className="software-button">Software</button>
+            </Link>
+            <Link to="/mathsquizmode">
+              <button className="maths-button">Maths</button>
+            </Link>
+            <Link to="/englishquizmode">
+              <button className="english-button">English</button>
+            </Link>
+            <Link to="/pccomponentsmode">
+              <button className="pccomponents-button">PC Components</button>
+            </Link> 
           </div>
         </div>
 
+        {/* Button to go back to the home page */}
         <a href="/">
           <button className="back-button">Back</button>
         </a>

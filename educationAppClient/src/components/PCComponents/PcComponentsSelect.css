@@ -1,0 +1,26 @@
+/* 
+  Style for the entire PC Components mode selector page.
+  Adds a vertical gradient background from purple to black and sets full screen height.
+*/
+.pc-components-mode-selector {
+    background-image: linear-gradient(#4C0099, black); /* Top to bottom gradient */
+    height: 100vh; /* Full viewport height */
+}
+
+/* 
+  Style for the main heading on the mode selector screen.
+  Makes the text white, centers it, and pushes it down to appear vertically centered-ish.
+*/
+.pc-components-mode-h1 {
+    color: white;            /* White text for visibility on dark background */
+    text-align: center;      /* Center the heading horizontally */
+    padding-top: 250px;      /* Space from top to vertically align */
+}
+
+/* 
+  Container for buttons in the mode selector.
+  Slight left padding to shift buttons slightly right from the edge.
+*/
+.pc-components-mode-buttons {
+    padding-left: 30px;      /* Adds space from the left side */
+}

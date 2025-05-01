@@ -91,7 +91,7 @@ button {
 
 .back-button {
   width: 120px;
-  height: 40px;
+  height: 60px;
   background-color: #dc3545;
   color: rgb(110, 28, 28);
   font-size: 14px;
@@ -147,15 +147,14 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 500px;
   margin-bottom: 20px;
   padding: 0 20px;
-  gap: 100px;
+  
 }
 
 .score-card {
-  width: 200px;
-  min-width: 200px;
+  width: 10%;
   background: #000000;
   color: white;
   opacity: 80%;
@@ -171,7 +170,6 @@ button {
 .buttons-row {
   display: flex;
   justify-content: space-between;
-  gap: 100px;
   align-items: center;
   width: 100%;
   padding: 0 20px;

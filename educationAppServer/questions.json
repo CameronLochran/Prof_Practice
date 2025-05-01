@@ -1198,5 +1198,538 @@
         "18"
       ],
       "answer": "16"
-    }
+    },
+      {
+        "id": 101,
+        "category": "English",
+        "difficulty": "Hard",
+        "question": "What is the past participle of 'Begin'?",
+        "options": ["Began", "Begun", "Beginning", "Begins"],
+        "answer": "Begun"
+      },
+      {
+        "id": 102,
+        "category": "English",
+        "difficulty": "Hard",
+        "question": "What is the past participle of 'Write'?",
+        "options": ["Writing", "Wrote", "Written", "Writes"],
+        "answer": "Written"
+      },
+      {
+        "id": 103,
+        "category": "English",
+        "difficulty": "Hard",
+        "question": "What is the past participle of 'Eat'?",
+        "options": ["Ate", "Eaten", "Eats", "Eating"],
+        "answer": "Eaten"
+      },
+      {
+        "id": 104,
+        "category": "English",
+        "difficulty": "Hard",
+        "question": "What is the past participle of 'See'?",
+        "options": ["Seen", "Saw", "Seeing", "Sees"],
+        "answer": "Seen"
+      },
+      {
+        "id": 105,
+        "category": "English",
+        "difficulty": "Hard",
+        "question": "What is the past participle of 'Take'?",
+        "options": ["Taked", "Took", "Taken", "Takes"],
+        "answer": "Taken"
+      },
+      {
+        "id": 106,
+        "category": "English",
+        "difficulty": "Hard",
+        "question": "What is the past participle of 'Go'?",
+        "options": ["Gone", "Went", "Goes", "Going"],
+        "answer": "Gone"
+      },
+      {
+        "id": 107,
+        "category": "English",
+        "difficulty": "Hard",
+        "question": "What is the past participle of 'Speak'?",
+        "options": ["Speaking", "Spoke", "Spoken", "Speaks"],
+        "answer": "Spoken"
+      },
+      {
+        "id": 108,
+        "category": "English",
+        "difficulty": "Hard",
+        "question": "What is the past participle of 'Break'?",
+        "options": ["Broken", "Broke", "Breaks", "Breaking"],
+        "answer": "Broken"
+      },
+      {
+        "id": 109,
+        "category": "English",
+        "difficulty": "Hard",
+        "question": "What is the past participle of 'Choose'?",
+        "options": ["Chose", "Chosen", "Choosing", "Chooses"],
+        "answer": "Chosen"
+      },
+      {
+        "id": 110,
+        "category": "English",
+        "difficulty": "Hard",
+        "question": "What is the past participle of 'Drive'?",
+        "options": ["Drove", "Driven", "Driving", "Drived"],
+        "answer": "Driven"
+      },
+      {
+        "id": 111,
+        "category": "English",
+        "difficulty": "Hard",
+        "question": "What is the homonym of 'The noise a dog makes / grows on a tree'?",
+        "options": ["Leaf", "Howl", "Bark", "Yell"],
+        "answer": "Bark"
+      },
+      {
+        "id": 112,
+        "category": "English",
+        "difficulty": "Hard",
+        "question": "What is the homonym of 'A flying mammal / a piece of sports equipment'?",
+        "options": ["Bat", "Net", "Crane", "Club"],
+        "answer": "Bat"
+      },
+      {
+        "id": 113,
+        "category": "English",
+        "difficulty": "Hard",
+        "question": "What is the homonym of 'To strike with a foot / a tool used for imprinting a mark'?",
+        "options": ["Seal", "Stamp", "Press", "Mark"],
+        "answer": "Stamp"
+      },
+      {
+        "id": 114,
+        "category": "English",
+        "difficulty": "Hard",
+        "question": "What is the homonym of 'A flying insect / something used to fasten clothing'?",
+        "options": ["Bee", "Tick", "Moth", "Fly"],
+        "answer": "Fly"
+      },
+      {
+        "id": 115,
+        "category": "English",
+        "difficulty": "Hard",
+        "question": "What is the homonym of 'The present moment / a flow of water'?",
+        "options": ["Tide", "Wave", "Current", "Now"],
+        "answer": "Current"
+      },
+      {
+        "id": 116,
+        "category": "English",
+        "difficulty": "Hard",
+        "question": "What is the homonym of 'A musical troupe / a ring of material'?",
+        "options": ["Band", "Chord", "Duet", "String"],
+        "answer": "Band"
+      },
+      {
+        "id": 117,
+        "category": "English",
+        "difficulty": "Hard",
+        "question": "What is the homonym of 'The sound a phone makes / circular jewellery'?",
+        "options": ["Band", "Ring", "Loop", "Chime"],
+        "answer": "Ring"
+      },
+      {
+        "id": 118,
+        "category": "English",
+        "difficulty": "Hard",
+        "question": "What is the homonym of 'A deep hole for water / to be in good health'?",
+        "options": ["Fountain", "Spring", "Strong", "Well"],
+        "answer": "Well"
+      },
+      {
+        "id": 119,
+        "category": "English",
+        "difficulty": "Hard",
+        "question": "What is the homonym of 'A counter for serving drinks / to disallow something'?",
+        "options": ["Tap", "Ban", "Bar", "Stop"],
+        "answer": "Bar"
+      },
+      {
+        "id": 120,
+        "category": "English",
+        "difficulty": "Hard",
+        "question": "What is the homonym of 'To have seen something / a tool for cutting wood'?",
+        "options": ["Slice", "Saw", "Splitter", "Gaze"],
+        "answer": "Saw"
+      },
+        {
+          "id": 121,
+          "category": "pccomponents",
+          "difficulty": "Hard",
+          "question": "Which of these features helps prevent static discharge damage during PC building?",
+          "options": ["Anti-static wrist strap", "PSU with high wattage", "Magnetic screwdriver", "Thermal paste"],
+          "answer": "Anti-static wrist strap"
+        },
+        {
+          "id": 122,
+          "category": "pccomponents",
+          "difficulty": "Hard",
+          "question": "What component determines the system’s maximum RAM capacity?",
+          "options": ["PSU", "CPU and motherboard", "GPU", "Storage controller"],
+          "answer": "CPU and motherboard"
+        },
+        {
+          "id": 123,
+          "category": "pccomponents",
+          "difficulty": "Hard",
+          "question": "Which of the following is a benefit of using an AIO (All-in-One) liquid cooler?",
+          "options": [
+            "Less risk of leaks than air coolers",
+            "Generally quieter and better thermal performance",
+            "Uses less power than air coolers",
+            "Automatically overclocks the CPU"
+          ],
+          "answer": "Generally quieter and better thermal performance"
+        },
+        {
+          "id": 124,
+          "category": "pccomponents",
+          "difficulty": "Hard",
+          "question": "Which component is most responsible for determining how many PCIe lanes are available?",
+          "options": ["CPU", "PSU", "RAM", "GPU"],
+          "answer": "CPU"
+        },
+        {
+          "id": 125,
+          "category": "pccomponents",
+          "difficulty": "Hard",
+          "question": "Which of these SSD form factors connects directly to the motherboard without cables?",
+          "options": ["2.5\" SATA", "mSATA", "M.2 NVMe", "USB 3.0"],
+          "answer": "M.2 NVMe"
+        },
+        {
+          "id": 126,
+          "category": "pccomponents",
+          "difficulty": "Hard",
+          "question": "Which of the following CPU features allows for better multitasking by running more threads simultaneously?",
+          "options": ["Turbo Boost", "Hyper-Threading / SMT", "Overclocking", "Virtualization"],
+          "answer": "Hyper-Threading / SMT"
+        },
+        {
+          "id": 127,
+          "category": "pccomponents",
+          "difficulty": "Hard",
+          "question": "Which is a primary factor when choosing a PSU for a high-end GPU?",
+          "options": [
+            "Number of SATA connectors",
+            "Modular cables",
+            "Wattage and 12V rail amperage",
+            "Size of the PSU fan"
+          ],
+          "answer": "Wattage and 12V rail amperage"
+        },
+        {
+          "id": 128,
+          "category": "pccomponents",
+          "difficulty": "Hard",
+          "question": "What is the main reason to use thermal paste between a CPU and its cooler?",
+          "options": [
+            "Prevent corrosion",
+            "Improve electrical contact",
+            "Ensure heat transfer by filling microscopic gaps",
+            "Reduce dust buildup"
+          ],
+          "answer": "Ensure heat transfer by filling microscopic gaps"
+        },
+        {
+          "id": 129,
+          "category": "pccomponents",
+          "difficulty": "Hard",
+          "question": "Which GPU architecture is associated with NVIDIA’s RTX 40 series?",
+          "options": ["Ampere", "Pascal", "Lovelace", "Turing"],
+          "answer": "Lovelace"
+        },
+        {
+          "id": 130,
+          "category": "pccomponents",
+          "difficulty": "Hard",
+          "question": "What determines the maximum supported memory frequency on a system?",
+          "options": ["PSU and GPU", "CPU and motherboard chipset", "BIOS version", "Drive configuration"],
+          "answer": "CPU and motherboard chipset"
+        },
+        {
+          "id": 131,
+          "category": "pccomponents",
+          "difficulty": "Hard",
+          "question": "Which of the following is true about NVMe over SATA SSDs?",
+          "options": [
+            "SATA SSDs are faster",
+            "NVMe SSDs are always 3.5\" drives",
+            "NVMe uses the PCIe bus for higher speeds",
+            "NVMe drives require external power"
+          ],
+          "answer": "NVMe uses the PCIe bus for higher speeds"
+        },
+        {
+          "id": 132,
+          "category": "pccomponents",
+          "difficulty": "Hard",
+          "question": "If your monitor supports 144Hz, which component must also support high refresh rates for smooth gaming?",
+          "options": ["PSU", "RAM", "GPU", "CPU cooler"],
+          "answer": "GPU"
+        },
+        {
+          "id": 133,
+          "category": "pccomponents",
+          "difficulty": "Hard",
+          "question": "What is the purpose of a VRM (Voltage Regulator Module) on a motherboard?",
+          "options": [
+            "To regulate case fan speeds",
+            "To power the GPU",
+            "To deliver stable power to the CPU",
+            "To manage USB ports"
+          ],
+          "answer": "To deliver stable power to the CPU"
+        },
+        {
+          "id": 134,
+          "category": "pccomponents",
+          "difficulty": "Hard",
+          "question": "Which CPU cooling method is typically best for compact or ITX builds?",
+          "options": [
+            "Mid-tower air cooler",
+            "Custom loop liquid cooling",
+            "Low-profile air cooler or 120mm AIO",
+            "Passive cooling only"
+          ],
+          "answer": "Low-profile air cooler or 120mm AIO"
+        },
+        {
+          "id": 135,
+          "category": "pccomponents",
+          "difficulty": "Hard",
+          "question": "Which type of storage drive is most susceptible to data loss from shock or drops?",
+          "options": ["NVMe SSD", "M.2 SATA SSD", "HDD (Hard Disk Drive)", "USB flash drive"],
+          "answer": "HDD (Hard Disk Drive)"
+        },
+        {
+          "id": 136,
+          "category": "pccomponents",
+          "difficulty": "Hard",
+          "question": "What is the function of a POST during the boot process?",
+          "options": [
+            "It installs device drivers",
+            "It loads the operating system",
+            "It checks hardware components before OS loads",
+            "It connects to the internet"
+          ],
+          "answer": "It checks hardware components before OS loads"
+        },
+        {
+          "id": 137,
+          "category": "pccomponents",
+          "difficulty": "Hard",
+          "question": "Which of these motherboards would be most limited in expansion options?",
+          "options": ["ATX", "E-ATX", "microATX", "Mini-ITX"],
+          "answer": "Mini-ITX"
+        },
+        {
+          "id": 138,
+          "category": "pccomponents",
+          "difficulty": "Hard",
+          "question": "Which of the following is a common symptom of insufficient PSU wattage?",
+          "options": [
+            "Slow download speeds",
+            "Display driver crashes or system restarts under load",
+            "Excessive fan noise from the case",
+            "BIOS not loading"
+          ],
+          "answer": "Display driver crashes or system restarts under load"
+        },
+        {
+          "id": 139,
+          "category": "pccomponents",
+          "difficulty": "Hard",
+          "question": "Why might someone choose an unlocked CPU model like Intel’s “K” series or AMD’s “X” series?",
+          "options": [
+            "They support dual-booting",
+            "They offer better integrated graphics",
+            "They allow manual overclocking",
+            "They are quieter"
+          ],
+          "answer": "They allow manual overclocking"
+        },
+        {
+          "id": 140,
+          "category": "pccomponents",
+          "difficulty": "Hard",
+          "question": "What is the purpose of a case fan?",
+          "options": [
+            "To cool the CPU",
+            "To cool the GPU",
+            "To improve airflow and cooling in the case",
+            "To power the motherboard"
+          ],
+          "answer": "To improve airflow and cooling in the case"
+        },
+          {
+            "id": 141,
+            "category": "Software Dev",
+            "difficulty": "Hard",
+            "question": "What is the main drawback of using a monolithic architecture in large-scale software systems?",
+            "options": ["Difficult to deploy", "Difficult to test individual components", "Harder to write code", "Low performance"],
+            "answer": "Difficult to test individual components"
+          },
+          {
+            "id": 142,
+            "category": "Software Dev",
+            "difficulty": "Hard",
+            "question": "In multithreaded applications, what is a common consequence of improper lock management?",
+            "options": ["High memory usage", "Deadlock", "Slower I/O", "Race condition"],
+            "answer": "Deadlock"
+          },
+          {
+            "id": 143,
+            "category": "Software Dev",
+            "difficulty": "Hard",
+            "question": "What principle does the CAP theorem in distributed systems highlight?",
+            "options": ["Concurrency, Accuracy, Portability", "Consistency, Availability, Partition Tolerance", "Caching, Availability, Performance", "Control, Access, Protection"],
+            "answer": "Consistency, Availability, Partition Tolerance"
+          },
+          {
+            "id": 144,
+            "category": "Software Dev",
+            "difficulty": "Hard",
+            "question": "Which design pattern provides a way to access the elements of a collection without exposing its underlying representation?",
+            "options": ["Strategy", "Decorator", "Iterator", "Observer"],
+            "answer": "Iterator"
+          },
+          {
+            "id": 145,
+            "category": "Software Dev",
+            "difficulty": "Hard",
+            "question": "What is the role of a 'saga' in a microservices architecture?",
+            "options": ["To log system events for analytics", "To provide API versioning", "To manage distributed transactions", "To implement service discovery"],
+            "answer": "To manage distributed transactions"
+          },
+          {
+            "id": 146,
+            "category": "Software Dev",
+            "difficulty": "Hard",
+            "question": "In functional programming, what does it mean for a function to be 'pure'?",
+            "options": ["It uses only primitive types", "It does not alter any state and has no side effects", "It executes asynchronously", "It handles memory allocation manually"],
+            "answer": "It does not alter any state and has no side effects"
+          },
+          {
+            "id": 147,
+            "category": "Software Dev",
+            "difficulty": "Hard",
+            "question": "What is a key disadvantage of eventual consistency in distributed systems?",
+            "options": ["Higher latency", "Higher development cost", "Data anomalies in read operations", "Lack of scalability"],
+            "answer": "Data anomalies in read operations"
+          },
+          {
+            "id": 148,
+            "category": "Software Dev",
+            "difficulty": "Hard",
+            "question": "Which of the following best describes the term 'backpressure' in reactive programming?",
+            "options": ["Delaying user input to avoid overload", "Pushing data downstream faster than upstream", "Handling the flow of data when the consumer is slower than the producer", "Maintaining backward compatibility with previous releases"],
+            "answer": "Handling the flow of data when the consumer is slower than the producer"
+          },
+          {
+            "id": 149,
+            "category": "Software Dev",
+            "difficulty": "Hard",
+            "question": "What problem does the 'circuit breaker' pattern solve in microservices?",
+            "options": ["Dependency injection failure", "Load balancing inconsistency", "Propagation of failures between services", "Version control conflicts"],
+            "answer": "Propagation of failures between services"
+          },
+          {
+            "id": 150,
+            "category": "Software Dev",
+            "difficulty": "Hard",
+            "question": "Which consistency model ensures that all accesses are seen in the same order by all processes?",
+            "options": ["Eventual consistency", "Strong consistency", "Causal consistency", "Sequential consistency"],
+            "answer": "Sequential consistency"
+          },
+          {
+            "id": 151,
+            "category": "Software Dev",
+            "difficulty": "Hard",
+            "question": "What is the primary role of an ORM (Object-Relational Mapper) in software development?",
+            "options": ["To manage memory allocation", "To optimize API calls", "To map between objects in code and database tables", "To render frontend UI components"],
+            "answer": "To map between objects in code and database tables"
+          },
+          {
+            "id": 152,
+            "category": "Software Dev",
+            "difficulty": "Hard",
+            "question": "Which HTTP method is idempotent and used for updating resources?",
+            "options": ["POST", "PUT", "GET", "PATCH"],
+            "answer": "PUT"
+          },
+          {
+            "id": 153,
+            "category": "Software Dev",
+            "difficulty": "Hard",
+            "question": "What is the primary reason to use immutability in software design?",
+            "options": ["Easier debugging", "Increased memory usage", "Faster disk writes", "Improved parallelism and predictability"],
+            "answer": "Improved parallelism and predictability"
+          },
+          {
+            "id": 154,
+            "category": "Software Dev",
+            "difficulty": "Hard",
+            "question": "Which algorithm is commonly used in consensus protocols like Raft?",
+            "options": ["Quicksort", "Paxos", "RSA", "Bellman-Ford"],
+            "answer": "Paxos"
+          },
+          {
+            "id": 155,
+            "category": "Software Dev",
+            "difficulty": "Hard",
+            "question": "In version control, what does a 'rebase' operation do?",
+            "options": ["Deletes a branch", "Combines multiple commits into one", "Applies commits on top of another base tip", "Creates a new repository"],
+            "answer": "Applies commits on top of another base tip"
+          },
+          {
+            "id": 156,
+            "category": "Software Dev",
+            "difficulty": "Hard",
+            "question": "In software architecture, what is the 'strangler pattern' used for?",
+            "options": ["To kill long-running services", "To migrate from a monolith to microservices incrementally", "To handle circular dependencies", "To monitor memory leaks"],
+            "answer": "To migrate from a monolith to microservices incrementally"
+          },
+          {
+            "id": 157,
+            "category": "Software Dev",
+            "difficulty": "Hard",
+            "question": "Why is tail call optimization important in recursive functions?",
+            "options": ["It improves security", "It prevents stack overflow", "It enables multithreading", "It caches the return value"],
+            "answer": "It prevents stack overflow"
+          },
+          {
+            "id": 158,
+            "category": "Software Dev",
+            "difficulty": "Hard",
+            "question": "Which technique is used to ensure referential transparency in functional programming?",
+            "options": ["Mutable objects", "Pure functions", "Side effects", "Loop unrolling"],
+            "answer": "Pure functions"
+          },
+          {
+            "id": 159,
+            "category": "Software Dev",
+            "difficulty": "Hard",
+            "question": "What does the SOLID principle 'Liskov Substitution Principle' state?",
+            "options": ["Child classes must be able to replace parent classes without altering the correctness", "Classes should be open for modification", "Only one reason for a class to change", "Dependencies should rely on abstractions"],
+            "answer": "Child classes must be able to replace parent classes without altering the correctness"
+          },
+          {
+            "id": 160,
+            "category": "Software Dev",
+            "difficulty": "Hard",
+            "question": "In a CI/CD pipeline, what is a 'canary deployment'?",
+            "options": ["Deploying all changes at once", "Deploying code changes to a subset of users before full rollout", "Rolling back changes immediately", "Using containers in deployment"],
+            "answer": "Deploying code changes to a subset of users before full rollout"
+          }
+        
+        
+      
 ]

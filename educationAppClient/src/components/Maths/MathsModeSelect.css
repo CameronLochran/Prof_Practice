@@ -1,0 +1,17 @@
+/* Main container for the Maths mode selector page */
+.maths-mode-selector {
+    background-image: linear-gradient(#CC6600, black); /* Applies a gradient background from orange to black */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Styling for the main heading on the Maths mode page */
+.maths-mode-h1 {
+    color: white; /* White text for contrast */
+    text-align: center; /* Centers the heading text */
+    padding-top: 250px; /* Adds space from the top to vertically center it better */
+}
+
+/* Container for the buttons (e.g., Normal/Hard Mode buttons) */
+.maths-mode-buttons {
+    padding-left: 30px; /* Adds some spacing from the left */
+}

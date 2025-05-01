@@ -12,7 +12,8 @@ function App() {
     options: ['', '', '', ''],
     answer: ''
   });
-  const [categoryFilter, setCategoryFilter] = useState('');//
+
+  const [categoryFilter, setCategoryFilter] = useState('');
   const [difficultyFilter, setDifficultyFilter] = useState('');
   const [editingQuestion, setEditingQuestion] = useState(null);  // State for editing
 
@@ -112,11 +113,44 @@ function App() {
     setFilteredQuestions(updatedQuestions);  // Update filtered questions as well
   };
 
+  const resetScores = () => {
+    localStorage.removeItem("softwareQuizProgress");
+    localStorage.removeItem("softwareCorrectAnswers");
+    localStorage.removeItem("softwareLatestScore");
+    localStorage.removeItem("softwareBestScore");
+
+    localStorage.removeItem("mathsQuizProgress");
+    localStorage.removeItem("mathsCorrectAnswers");
+    localStorage.removeItem("mathsLatestScore");
+    localStorage.removeItem("mathsBestScore");
+
+    localStorage.removeItem("englishQuizProgress");
+    localStorage.removeItem("englishCorrectAnswers");
+    localStorage.removeItem("englishLatestScore");
+    localStorage.removeItem("englishBestScore");
+
+    localStorage.removeItem("pccomponentsQuizProgress");
+    localStorage.removeItem("pccomponentsCorrectAnswers");
+    localStorage.removeItem("pccomponentsLatestScore");
+    localStorage.removeItem("pccomponentsBestScore");
+  
+    setCurrentQuestionIndex(0);
+    setCorrectAnswers(0);
+    setLatestScore(0);
+    setBestScore(0);
+    setQuizCompleted(false);
+  };
+
   return (
     <div>
       <br /><br />
       <h1>Welcome Admin</h1>
-      {/* Filters Section */}
+
+      <button onClick={resetScores} className="reset-button">
+        Reset Results
+        <p>Pressing this resets the latest and best score</p>
+      </button>
+      {/* Filters Section
       <br /><br />
       <div>
         <h2>Filter Questions</h2>
@@ -133,7 +167,7 @@ function App() {
           <option value="Hard">Hard</option>
         </select>
       </div>
-      {/* Create new question form */}
+      
       <br /><br />
       <div>
         <h2>{editingQuestion ? 'Edit Question' : 'Add a New Question'}</h2>
@@ -230,7 +264,7 @@ function App() {
           <button onClick={cancelEditing}>Cancel</button>
         )}
       </div>
-      {/* Read: Display filtered questions */}
+      
       <div>
         <h2>Questions List</h2>
         {filteredQuestions.map((q) => (
@@ -243,7 +277,7 @@ function App() {
             <button onClick={() => deleteQuestion(q.id)}>Delete</button>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

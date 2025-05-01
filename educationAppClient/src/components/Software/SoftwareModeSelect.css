@@ -1,0 +1,26 @@
+/* Style for the container of the software mode selector screen */
+.software-mode-selector {
+    /* Applies a linear gradient from green (#009900) to black */
+    background-image: linear-gradient(#009900, black);
+    
+    /* Sets the height of the container to 100% of the viewport height */
+    height: 100vh;
+}
+
+/* Style for the main heading in the software mode screen */
+.software-mode-h1 {
+    /* Makes the text color white */
+    color: white;
+    
+    /* Centers the heading text */
+    text-align: center;
+    
+    /* Adds padding to the top of the heading to position it vertically (250px) */
+    padding-top: 250px;
+}
+
+/* Style for the container of buttons in the software mode screen */
+.software-mode-buttons {
+    /* Adds left padding of 30px to the button container */
+    padding-left: 30px;
+}
