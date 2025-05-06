@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import '../../styles/English.css';
 
 export default function EnglishQuiz() {
+  // State to manage questions and user progress
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState("");
@@ -12,11 +13,12 @@ export default function EnglishQuiz() {
   const [bestScore, setBestScore] = useState(0);
   const [quizCompleted, setQuizCompleted] = useState(false);
 
-  // Fetch questions & restore any saved progress/scores
+  // Load questions and restore saved progress on mount
   useEffect(() => {
     fetch("http://localhost:3000/api/questions")
       .then((response) => response.json())
       .then((data) => {
+        // Filter only English category with Normal difficulty
         const filteredQuestions = Array.isArray(data)
           ? data.filter((q) => q.category === "English" && q.difficulty === "Normal")
           : [];
@@ -24,7 +26,7 @@ export default function EnglishQuiz() {
       })
       .catch((error) => console.error("Error fetching questions:", error));
 
-    // Restore progress and scores
+    // Retrieve progress from localStorage
     const savedProgress = localStorage.getItem("englishQuizProgress");
     const savedCorrectAnswers = localStorage.getItem("englishCorrectAnswers");
     const savedBestScore = localStorage.getItem("englishBestScore");
@@ -36,20 +38,19 @@ export default function EnglishQuiz() {
     if (savedLatestScore) setLatestScore(Number(savedLatestScore));
   }, []);
 
-  // Save progress on every question
+  // Save current progress and update best/latest score if quiz ends
   useEffect(() => {
     localStorage.setItem("englishQuizProgress", currentQuestionIndex);
     localStorage.setItem("englishCorrectAnswers", correctAnswers);
 
-    // If quiz is completed now
     if (questions.length > 0 && currentQuestionIndex === questions.length && !quizCompleted) {
       const previousBest = Number(localStorage.getItem("englishBestScore")) || 0;
 
-      // Save latest score
+      // Save latest attempt
       localStorage.setItem("englishLatestScore", correctAnswers);
       setLatestScore(correctAnswers);
 
-      // Save best score if improved
+      // Update best score if user improved
       if (correctAnswers > previousBest) {
         localStorage.setItem("englishBestScore", correctAnswers);
         setBestScore(correctAnswers);
@@ -59,6 +60,7 @@ export default function EnglishQuiz() {
     }
   }, [currentQuestionIndex, correctAnswers, questions, quizCompleted]);
 
+  // When an answer is selected, check correctness and update score
   const handleAnswerSelect = (answer) => {
     setSelectedAnswer(answer);
     if (answer === questions[currentQuestionIndex].answer) {
@@ -66,6 +68,7 @@ export default function EnglishQuiz() {
     }
   };
 
+  // Proceed to next question
   const nextQuestion = () => {
     setSelectedAnswer("");
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
@@ -74,10 +77,12 @@ export default function EnglishQuiz() {
   const question = questions[currentQuestionIndex];
   const progress = (currentQuestionIndex / questions.length) * 100;
 
+  // Show loading message while questions are being fetched
   if (!questions.length) {
     return <p className="text-center">Loading English Questions...</p>;
   }
 
+  // Display final score after quiz completion
   if (quizCompleted || currentQuestionIndex >= questions.length) {
     return (
       <div className="english-quiz-container">
@@ -86,13 +91,13 @@ export default function EnglishQuiz() {
         <p className="text-xl">Latest Score: {latestScore}</p>
         <p className="text-xl">Best Score: {bestScore}</p>
 
+        {/* Navigation button */}
         <Link to="/categorySelection">
           <button className="back-button">Back to Categories</button>
         </Link>
       </div>
     );
   }
-  
 
   return (
     <main>
@@ -101,11 +106,15 @@ export default function EnglishQuiz() {
         <div className="english-quiz-container">
           <h1 className="english-h1">English Quiz</h1>
 
+          {/* Progress Bar */}
           <div className="english-progress-bar-container">
             <div className="english-progress-bar" style={{ width: `${progress}%` }}></div>
           </div>
 
+          {/* Display current question */}
           <h2 className="question">{question.question}</h2>
+
+          {/* Multiple choice options */}
           <div className="options-grid">
             {question.options.map((option, index) => (
               <button
@@ -114,19 +123,20 @@ export default function EnglishQuiz() {
                 className={`option-button ${
                   selectedAnswer
                     ? option === question.answer
-                      ? "bg-green-500"
+                      ? "bg-green-500" // correct answer
                       : option === selectedAnswer
-                      ? "bg-red-500"
-                      : "bg-gray-200"
+                      ? "bg-red-500" // selected wrong answer
+                      : "bg-gray-200" // other unselected
                     : "bg-gray-200"
                 }`}
-                disabled={!!selectedAnswer}
+                disabled={!!selectedAnswer} // disable once answered
               >
                 {option}
               </button>
             ))}
           </div>
 
+          {/* Show correctness feedback */}
           {selectedAnswer && (
             <p className="right-or-wrong">
               {selectedAnswer === question.answer
@@ -135,6 +145,7 @@ export default function EnglishQuiz() {
             </p>
           )}
 
+          {/* Next question button appears only after an answer is selected */}
           {selectedAnswer && (
             <button onClick={nextQuestion} className="next-question">
               Next Question →
@@ -142,6 +153,7 @@ export default function EnglishQuiz() {
           )}
 
           <br />
+          {/* Link back to categories */}
           <Link to="/categorySelection">
             <button className="back-button">Back</button>
           </Link>

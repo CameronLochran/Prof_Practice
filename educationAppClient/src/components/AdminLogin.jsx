@@ -15,7 +15,7 @@ const AdminLogin = () => {
     e.preventDefault(); // Prevent the default form submission behavior (page reload)
 
     // Check if the entered username and password match the predefined values
-    if (username === 'admin' && password === 'nathansmaw') {
+    if (username === 'admin' && password === 'teamwfls') {
       // If the credentials are correct, navigate to the '/admindetails' page
       navigate('/admindetails');
     } else {

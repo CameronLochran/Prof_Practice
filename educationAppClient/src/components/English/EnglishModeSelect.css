@@ -1,12 +1,17 @@
-.english-mode-selector{
-    background-image: linear-gradient(#990000, black);
-    height: 100vh;
+/* Container for the mode selection screen */
+.english-mode-selector {
+    background-image: linear-gradient(#990000, black); /* Creates a vertical gradient from dark red to black */
+    height: 100vh; /* Makes the section take the full viewport height */
 }
-.english-mode-h1{
-    color: white;
-    text-align: center;
-    padding-top: 250px;
+
+/* Heading style for the mode selection page */
+.english-mode-h1 {
+    color: white; /* White text for better contrast on dark background */
+    text-align: center; /* Centers the heading horizontally */
+    padding-top: 250px; /* Pushes the heading down vertically for visual spacing */
 }
-.english-mode-buttons{
-    padding-left: 30px;
+
+/* Container for the buttons under the heading */
+.english-mode-buttons {
+    padding-left: 30px; /* Adds space to the left of the buttons */
 }
