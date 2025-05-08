@@ -1,0 +1,34 @@
+// Pseudocode for server.js
+
+1. Import required modules:
+   - `express` for creating the server.
+   - `fs` for file system operations.
+   - `path` for handling file paths.
+   - `cors` for enabling cross-origin requests.
+
+2. Initialize the Express app and set the port to 3000.
+
+3. Add middleware:
+   - Use `express.json()` to parse JSON request bodies.
+   - Use `cors()` to allow cross-origin requests.
+
+4. Define a function `loadQuestions` to:
+   - Read the `questions.json` file.
+   - Parse the file content into a JavaScript object.
+   - Handle errors if the file cannot be read.
+
+5. Create an endpoint `/api/questions`:
+   - Load questions using `loadQuestions`.
+   - Send the questions as a JSON response.
+
+6. Create an endpoint `/api/answer`:
+   - Extract `questionId` and `userAnswer` from the request body.
+   - Load questions using `loadQuestions`.
+   - Find the question with the matching `questionId`.
+   - If the question is not found, return a 404 error.
+   - Check if the `userAnswer` matches the correct answer.
+   - Respond with whether the answer is correct and the correct answer.
+
+7. Start the server:
+   - Listen on the specified port.
+   - Log a message indicating the server is running.
