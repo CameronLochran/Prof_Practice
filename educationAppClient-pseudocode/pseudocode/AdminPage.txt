@@ -1,0 +1,45 @@
+// Pseudocode for AdminLogin.jsx
+
+IMPORT React and useState from 'react'
+IMPORT useNavigate from 'react-router-dom'
+
+FUNCTION AdminLogin
+    // Initialize state variables for username, password, and message
+    SET username to empty string
+    SET password to empty string
+    SET message to empty string
+
+    // Initialize navigation function
+    SET navigate to useNavigate()
+
+    FUNCTION handleLogin(event)
+        PREVENT default form submission behavior
+
+        // Check if username and password match predefined values
+        IF username is 'admin' AND password is 'teamwfls' THEN
+            // Navigate to admin details page
+            CALL navigate('/admindetails')
+        ELSE
+            // Set error message for invalid credentials
+            SET message to '❌ Invalid username or password.'
+
+    RETURN JSX
+        DIV with styles for layout
+            HEADING 'Log In Homie'
+            FORM with onSubmit set to handleLogin
+                INPUT for username
+                    SET placeholder to 'Username'
+                    SET value to username
+                    ON change, update username state
+                    REQUIRED
+                INPUT for password
+                    SET type to 'password'
+                    SET placeholder to 'Password'
+                    SET value to password
+                    ON change, update password state
+                    REQUIRED
+                BUTTON to submit the form with text 'Login'
+            IF message is not empty THEN
+                DISPLAY message in a paragraph
+
+EXPORT AdminLogin

@@ -1,0 +1,44 @@
+// Pseudocode for AdminLogin Component
+
+// Import necessary libraries
+Import React and useState for state management
+Import useNavigate for navigation
+
+// Define AdminLogin component
+Function AdminLogin
+
+  // Initialize state variables
+  Create state variable for username
+  Create state variable for password
+  Create state variable for message
+
+  // Initialize navigation
+  Create navigate function using useNavigate
+
+  // Define handleLogin function
+  Function handleLogin
+    Prevent default form submission
+    If username is 'admin' AND password is 'teamwfls'
+      Navigate to '/admindetails'
+    Else
+      Set message to '❌ Invalid username or password.'
+
+  // Return JSX for rendering
+  Return JSX
+    Create a div with styling
+      Add a heading 'Log In Homie'
+      Create a form with onSubmit set to handleLogin
+        Create an input for username
+          Set value to username state
+          Set onChange to update username state
+          Make it required
+        Create an input for password
+          Set value to password state
+          Set onChange to update password state
+          Make it required
+        Create a submit button with text 'Login'
+      If message is not empty
+        Display the message
+
+// Export AdminLogin component
+Export AdminLogin

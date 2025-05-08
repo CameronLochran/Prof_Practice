@@ -1,0 +1,26 @@
+FUNCTION AdminLogin
+    INITIALIZE state variables: username, password, message
+
+    FUNCTION handleLogin(event)
+        PREVENT default form submission behavior
+        IF username is 'admin' AND password is 'teamwfls' THEN
+            NAVIGATE to '/admindetails'
+        ELSE
+            SET message to '❌ Invalid username or password.'
+
+    RETURN
+        DIV with styling
+            HEADING 'Log In Homie'
+            FORM with onSubmit set to handleLogin
+                INPUT for username
+                    SET value to username
+                    ON change, update username state
+                    REQUIRED
+                INPUT for password
+                    SET value to password
+                    ON change, update password state
+                    REQUIRED
+                BUTTON to submit the form with text 'Login'
+            IF message is not empty THEN
+                DISPLAY message
+END FUNCTION

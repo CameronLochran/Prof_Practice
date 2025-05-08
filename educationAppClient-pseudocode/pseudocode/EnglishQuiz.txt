@@ -1,0 +1,35 @@
+// Pseudocode for AdminLogin.jsx
+
+1. Import necessary libraries:
+   - React
+   - useState hook for managing state
+   - useNavigate hook for navigation
+
+2. Define AdminLogin component:
+   - Initialize state variables:
+     - username (string)
+     - password (string)
+     - message (string)
+
+3. Use useNavigate hook to get navigate function.
+
+4. Define handleLogin function:
+   - Prevent default form submission behavior.
+   - Check if username is 'admin' and password is 'teamwfls':
+     - If true, navigate to '/admindetails'.
+     - If false, set message to '❌ Invalid username or password.'.
+
+5. Return JSX for rendering:
+   - Create a div with styling for layout.
+   - Add a heading "Log In Homie".
+   - Create a form with onSubmit event:
+     - Input field for username:
+       - Set value to username state.
+       - Update username state on change.
+       - Make field required.
+     - Input field for password:
+       - Set value to password state.
+       - Update password state on change.
+       - Make field required.
+     - Submit button with text "Login".
+   - Conditionally render message if it exists.

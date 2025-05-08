@@ -1,0 +1,42 @@
+FUNCTION AdminLogin
+    DECLARE username AS STRING
+    DECLARE password AS STRING
+    DECLARE message AS STRING
+
+    FUNCTION handleLogin(event)
+        PREVENT default form submission
+        IF username IS 'admin' AND password IS 'teamwfls' THEN
+            NAVIGATE to '/admindetails'
+        ELSE
+            SET message TO '❌ Invalid username or password.'
+        END IF
+    END FUNCTION
+
+    RETURN
+        CREATE a div with styles for max width, margin, and text alignment
+            ADD a heading "Log In Homie"
+            CREATE a form with onSubmit set to handleLogin
+                CREATE an input for username
+                    SET type to text
+                    SET placeholder to "Username"
+                    SET value to username
+                    ON change, UPDATE username with input value
+                    MARK as required
+                END INPUT
+                CREATE an input for password
+                    SET type to password
+                    SET placeholder to "Password"
+                    SET value to password
+                    ON change, UPDATE password with input value
+                    MARK as required
+                END INPUT
+                CREATE a button for submission
+                    SET type to submit
+                    SET text to "Login"
+                END BUTTON
+            END FORM
+            IF message EXISTS THEN
+                DISPLAY message
+            END IF
+        END DIV
+END FUNCTION

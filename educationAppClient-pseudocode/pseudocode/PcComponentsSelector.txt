@@ -1,0 +1,37 @@
+1. Import necessary libraries:
+   - React
+   - useState hook for managing state
+   - useNavigate hook for navigation
+
+2. Define AdminLogin component:
+   - Initialize state variables:
+     - username (string)
+     - password (string)
+     - message (string)
+
+3. Use useNavigate hook to get navigate function.
+
+4. Define handleLogin function:
+   - Prevent default form submission behavior.
+   - Check if username is 'admin' and password is 'teamwfls':
+     - If true, navigate to '/admindetails'.
+     - If false, set message to '❌ Invalid username or password.'.
+
+5. Return JSX for rendering:
+   - Create a div with styling for centering.
+   - Add a heading "Log In Homie".
+   - Create a form with:
+     - Input field for username:
+       - Type: text
+       - Placeholder: "Username"
+       - Value: username state
+       - OnChange: update username state
+       - Required field
+     - Input field for password:
+       - Type: password
+       - Placeholder: "Password"
+       - Value: password state
+       - OnChange: update password state
+       - Required field
+     - Submit button with text "Login".
+   - Conditionally render error message if message state is not empty.

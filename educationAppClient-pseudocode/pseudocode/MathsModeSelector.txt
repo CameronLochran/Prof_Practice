@@ -1,0 +1,50 @@
+FUNCTION AdminLogin
+    // Initialize state variables for username, password, and message
+    SET username TO ''
+    SET password TO ''
+    SET message TO ''
+
+    // Initialize navigation function
+    SET navigate TO useNavigate()
+
+    FUNCTION handleLogin(event)
+        // Prevent default form submission
+        CALL event.preventDefault()
+
+        // Check if username and password are correct
+        IF username IS 'admin' AND password IS 'teamwfls' THEN
+            // Navigate to admin details page
+            CALL navigate('/admindetails')
+        ELSE
+            // Set error message for invalid credentials
+            SET message TO '❌ Invalid username or password.'
+
+    END FUNCTION
+
+    // Render the login form
+    RETURN
+        DISPLAY a div with max width 400px, centered
+            DISPLAY heading 'Log In Homie'
+            DISPLAY a form
+                // Username input field
+                DISPLAY input for username
+                    SET placeholder TO 'Username'
+                    SET value TO username
+                    ON change, UPDATE username state
+                    MARK as required
+
+                // Password input field
+                DISPLAY input for password
+                    SET placeholder TO 'Password'
+                    SET value TO password
+                    ON change, UPDATE password state
+                    MARK as required
+
+                // Submit button
+                DISPLAY button with text 'Login'
+
+            // Display error message if exists
+            IF message EXISTS THEN
+                DISPLAY message
+
+END FUNCTION

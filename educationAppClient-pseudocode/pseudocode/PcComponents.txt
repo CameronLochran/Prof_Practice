@@ -1,0 +1,14 @@
+educationAppClient/
+│
+├── Pseudocode/
+│   ├── AdminLogin.txt
+│   ├── OtherComponent1.txt
+│   ├── OtherComponent2.txt
+│   └── ...
+│
+└── src/
+    ├── components/
+    │   ├── AdminLogin.jsx
+    │   ├── OtherComponent1.jsx
+    │   ├── OtherComponent2.jsx
+    │   └── ...

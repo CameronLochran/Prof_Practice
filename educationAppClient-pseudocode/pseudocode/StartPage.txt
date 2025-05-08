@@ -1,0 +1,44 @@
+START AdminLogin Component
+
+  IMPORT React and useState from 'react'
+  IMPORT useNavigate from 'react-router-dom'
+
+  DEFINE AdminLogin function
+    INITIALIZE state variables:
+      username as empty string
+      password as empty string
+      message as empty string
+
+    INITIALIZE navigate using useNavigate()
+
+    DEFINE handleLogin function with parameter e
+      CALL e.preventDefault() to prevent default form submission
+
+      IF username is 'admin' AND password is 'teamwfls' THEN
+        CALL navigate('/admindetails') to redirect to admin details page
+      ELSE
+        SET message to '❌ Invalid username or password.'
+
+    RETURN JSX:
+      CREATE a div with styles for layout
+        ADD a heading "Log In Homie"
+        CREATE a form with onSubmit set to handleLogin
+          ADD an input for username
+            SET type to "text"
+            SET placeholder to "Username"
+            SET value to username
+            SET onChange to update username state
+            SET required attribute
+            ADD styles for input
+          ADD an input for password
+            SET type to "password"
+            SET placeholder to "Password"
+            SET value to password
+            SET onChange to update password state
+            SET required attribute
+            ADD styles for input
+          ADD a submit button with text "Login"
+        IF message is not empty THEN
+          DISPLAY message in a paragraph
+
+END AdminLogin Component
