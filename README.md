@@ -16,3 +16,5 @@ npm i path,
 npm i cors
 5) Run "npm run dev" on the client and "npm start" on the server side
    
+NOTES SECTION
+-------------
