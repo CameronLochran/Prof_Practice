@@ -18,3 +18,5 @@ npm i cors
    
 NOTES SECTION
 -------------
+Link to Testing document:
+https://docs.google.com/document/d/1z3FXMc2ycLkQAMaHsa1gNp4yKovf1yB6HlTzwDLouh8/edit?tab=t.0#heading=h.8roihfmt6aj
