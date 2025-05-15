@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';  // Importing React and useEffect hook
 import { useNavigate } from 'react-router-dom';  // Importing useNavigate for navigation
 import '../styles/StartPage.css';  // Importing custom CSS for styling
-import wflslogo from '../../public/wflslogo.png';  // Importing logo image
+import wflslogo from '../../src/wflsLogo.png';  // Importing logo image
 
 const StartPage = () => {
   // Initializing the navigate function from the 'react-router-dom' library
