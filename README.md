@@ -1,3 +1,8 @@
+PROJECT OVERVIEW
+----------------
+
+Team WFLS developed an educational web application using JavaScript and the React framework. The primary goal of the project was to create an interactive and engaging platform to help users learn effectively through quizzes. The app is designed with user experience in mind, focusing on responsiveness, accessibility, and ease of navigation.
+
 INSTALLATION INSTRUCTIONS
 -------------------------
 
